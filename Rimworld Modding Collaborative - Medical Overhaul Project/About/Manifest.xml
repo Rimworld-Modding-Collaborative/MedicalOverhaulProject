@@ -8,6 +8,6 @@
         <li>JecsTools</li>
     </loadAfter>
 	<showCrossPromotions>false</showCrossPromotions>
-    <manifestUri></manifestUri>
+    <manifestUri>https://raw.githubusercontent.com/Rimworld-Modding-Collaborative/MedicalOverhaulProject/Development-Branch/Rimworld%20Modding%20Collaborative%20-%20Medical%20Overhaul%20Project/About/Manifest.xml</manifestUri>
     <downloadUri>https://github.com/Rimworld-Modding-Collaborative/MedicalOverhaulProject/releases/latest</downloadUri>
 </Manifest>
