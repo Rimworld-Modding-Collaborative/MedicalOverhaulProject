@@ -1,0 +1,6 @@
+d:\GAMES\RimWorld1-0-2282Win64\Mods\Heddifs\Assemblies\MedicalOverhaul.dll
+d:\GAMES\RimWorld1-0-2282Win64\Mods\Heddifs\Assemblies\MedicalOverhaul.pdb
+d:\GAMES\RimWorld1-0-2282Win64\Mods\Heddifs\Source\MedicalOverhaul\MedicalOverhaul\obj\Debug\MedicalOverhaul.csprojAssemblyReference.cache
+d:\GAMES\RimWorld1-0-2282Win64\Mods\Heddifs\Source\MedicalOverhaul\MedicalOverhaul\obj\Debug\MedicalOverhaul.csproj.CoreCompileInputs.cache
+d:\GAMES\RimWorld1-0-2282Win64\Mods\Heddifs\Source\MedicalOverhaul\MedicalOverhaul\obj\Debug\MedicalOverhaul.dll
+d:\GAMES\RimWorld1-0-2282Win64\Mods\Heddifs\Source\MedicalOverhaul\MedicalOverhaul\obj\Debug\MedicalOverhaul.pdb
