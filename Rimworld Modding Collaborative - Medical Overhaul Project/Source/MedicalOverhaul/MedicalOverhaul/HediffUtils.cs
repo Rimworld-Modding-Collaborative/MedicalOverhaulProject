@@ -41,19 +41,17 @@ namespace MedicalOverhaul
                 }
             }
         }
-        public static void GiveRespiratoryFailure(Pawn pawn, string partName = null, int? minHour = null, int? maxHour = null)
+        public static void GiveHediffToPawn(Pawn pawn, HediffDef hediffDef, string partName = null, int? minHour = null, int? maxHour = null)
         {
             BodyPartRecord part = null;
             if (partName != null)
             {
                 part = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.defName == partName);
             }
-            HediffDef hediffDef = HediffDefOf.RespiratoryFailure;
-            Hediff RespiratoryFailureHediff = HediffMaker.MakeHediff(HediffDefOf.RespiratoryFailure, pawn, part);
-            setDeathTime(RespiratoryFailureHediff, minHour, maxHour);
-            pawn.health.AddHediff(RespiratoryFailureHediff);
-            Log.Message(pawn.Label + " receives hediff " + RespiratoryFailureHediff.Label);
+            Hediff hediff = HediffMaker.MakeHediff(hediffDef, pawn, part);
+            setDeathTime(hediff, minHour, maxHour);
+            pawn.health.AddHediff(hediff);
+            Log.Message(pawn.Label + " receives hediff " + hediff.Label);
         }
-
-            }
+    }
 }
