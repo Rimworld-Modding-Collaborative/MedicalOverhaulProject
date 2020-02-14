@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<HediffDef Name="InjuryBase" Abstract="True">
+	<HediffDef Name="FailureBase" Abstract="True">
 		<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(1, 0.35, 0.35)</defaultLabelColor>
 		<initialSeverity>0.001</initialSeverity>
 		<everCurableByItem>false</everCurableByItem>
 	</HediffDef>
 
-	<HediffDef ParentName="InjuryBase">
+	<HediffDef ParentName="FailureBase">
 		<defName>RespiratoryFailure</defName>
 		<label>Respiratory Failure</label>
 		<lethalSeverity>0.8</lethalSeverity>
