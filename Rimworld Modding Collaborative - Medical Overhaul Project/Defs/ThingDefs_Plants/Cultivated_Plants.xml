@@ -25,7 +25,7 @@
 			<harvestWork>20</harvestWork>
 			<harvestTag>Standard</harvestTag>
 			<harvestedThingDef>PoppyFlowers</harvestedThingDef>
-			<harvestYield>6</harvestYield>
+			<harvestYield>1</harvestYield>
 			<sowMinSkill>4</sowMinSkill>
 			<sowTags>
 				<li>Ground</li>

@@ -292,13 +292,13 @@
 		<ExtraProducts>
 			<li>
 				<productdef>RawPoppies</productdef>
-				<Min>1</Min>
-				<Max>3</Max>
+				<Min>0</Min>
+				<Max>6</Max>
 			</li>
 			<li>
 				<productdef>PoppyMilk</productdef>
-				<Min>2</Min>
-				<Max>6</Max>
+				<Min>0</Min>
+				<Max>2</Max>
 			</li>
 		</ExtraProducts>
 	  </li>
