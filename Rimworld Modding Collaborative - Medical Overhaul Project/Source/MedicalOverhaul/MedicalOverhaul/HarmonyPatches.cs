@@ -40,7 +40,7 @@ namespace MedicalOverhaul
                                 Random random = new Random();
                                 if (random.Next(0, 100) < 20)
                                 {
-                                    HediffUtils.GiveRespiratoryFailure(pawn, "Torso", 7, 16);
+                                    HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, "Torso", 7, 16);
                                 }
                             }
                         }
@@ -51,7 +51,7 @@ namespace MedicalOverhaul
                                 Random random = new Random();
                                 if (random.Next(0, 100) < 30)
                                 {
-                                    HediffUtils.GiveRespiratoryFailure(pawn, BodyPartDefOf.Neck.defName, 3, 9);
+                                    HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, BodyPartDefOf.Neck.defName, 3, 9);
                                 }
                             }
                         }
@@ -92,26 +92,78 @@ namespace MedicalOverhaul
 
         public static bool AddCustomHediffs(Pawn_HealthTracker tracker, Pawn pawn, PawnCapacityDef pawnCapacityDef)
         {
+            bool result = false;
             if (pawn.RaceProps.IsFlesh && pawnCapacityDef.lethalFlesh && !tracker.capacities.CapableOf(pawnCapacityDef))
             {
                 if (pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(p => p.def.defName == "Lung") == null)
                 {
                     if (!pawn.health.hediffSet.HasHediff(HediffDefOf.RespiratoryFailure))
                     {
-                        HediffUtils.GiveRespiratoryFailure(pawn, null, 3, 9);
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, null, 3, 9);
                     }
                     else
                     {
                         Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.RespiratoryFailure);
                         if (HediffUtils.getDeathTimeInHours(hediff) > 9f)
                         {
-                            HediffUtils.GiveRespiratoryFailure(pawn, null, 3, 9);
+                            HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, null, 3, 9);
                         }
                     }
-                    return true;
+                    result = true;
+                }
+
+                if (pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(p => p.def.defName == "Kidney") == null)
+                {
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.RenalFailure))
+                    {
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RenalFailure, null);
+                    }
+                    //else
+                    //{
+                    //    Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.RespiratoryFailure);
+                    //    if (HediffUtils.getDeathTimeInHours(hediff) > 9f)
+                    //    {
+                    //        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
+                    //    }
+                    //}
+                    result = true;
+                }
+
+                if (pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(p => p.def.defName == "Liver") == null)
+                {
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.LiverFailure))
+                    {
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.LiverFailure, null);
+                    }
+                    //else
+                    //{
+                    //    Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.RespiratoryFailure);
+                    //    if (HediffUtils.getDeathTimeInHours(hediff) > 9f)
+                    //    {
+                    //        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
+                    //    }
+                    //}
+                    result = true;
+                }
+
+                if (pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(p => p.def.defName == "Stomach") == null)
+                {
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.IntestinalFailure))
+                    {
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
+                    }
+                    //else
+                    //{
+                    //    Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.RespiratoryFailure);
+                    //    if (HediffUtils.getDeathTimeInHours(hediff) > 9f)
+                    //    {
+                    //        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
+                    //    }
+                    //}
+                    result = true;
                 }
             }
-            return false;
+            return result;
         }
     }
 }
