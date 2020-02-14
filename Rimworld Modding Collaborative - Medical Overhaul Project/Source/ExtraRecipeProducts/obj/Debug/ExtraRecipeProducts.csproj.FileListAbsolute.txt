@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimworld Modding Collaborative - Medical Overhaul Project\Assemblies\ExtraRecipeProducts.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimworld Modding Collaborative - Medical Overhaul Project\Assemblies\ExtraRecipeProducts.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimworld Modding Collaborative - Medical Overhaul Project\Source\ExtraRecipeProducts\obj\Debug\ExtraRecipeProducts.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimworld Modding Collaborative - Medical Overhaul Project\Source\ExtraRecipeProducts\obj\Debug\ExtraRecipeProducts.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimworld Modding Collaborative - Medical Overhaul Project\Source\ExtraRecipeProducts\obj\Debug\ExtraRecipeProducts.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Rimworld Modding Collaborative - Medical Overhaul Project\Source\ExtraRecipeProducts\obj\Debug\ExtraRecipeProducts.pdb
