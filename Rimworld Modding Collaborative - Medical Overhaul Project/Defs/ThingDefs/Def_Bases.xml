@@ -215,7 +215,7 @@
        <foodType>VegetableOrFruit</foodType>
     </ingestible>
     <thingCategories>
-      <li>FruitFoodRaw</li>
+      <li>PlantFoodRaw</li>
     </thingCategories>
   </ThingDef>
 
