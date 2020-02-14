@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>SynthesizedOpium</defName>
+		<!-- TODO: Synthesized Opium XML-->
+		<!-- texturePath
+			   graphicClass
+			   statBases
+			   ingestible (is it addictive? what are the options when wanting to ingest?)
+			     outcomeDoers (what happens to a Pawn using the drug?)
+			   costList
+			   -->
+		<label>synthesized opium</label>
+		<description>A synthetic derivative of the poppy plant, it acts as a DESCRIPTION NEEDED.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/PlantFoodRaw/PoppyMilk</texPath>
+			<!-- TODO: Synth Opium texturePath -->
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<!-- TODO: Synth Opium graphicClass -->
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<!-- TODO: Synth Opium WorkToMake, MarketValue, Mass-->
+			<WorkToMake>600</WorkToMake>
+			<MarketValue>53</MarketValue>
+			<Mass>0.1</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<!-- TODO: Synth Opium, is it addictive? Etc.-->
+			<joyKind>Chemical</joyKind>
+			<joy>0.40</joy>
+			<drugCategory>Hard</drugCategory>
+			<foodType>Processed, Fluid</foodType>
+			<baseIngestTicks>90</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Inject {0}</ingestCommandString>
+			<ingestReportString>Injecting {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<chairSearchRadius>0</chairSearchRadius>
+			<outcomeDoers>
+				<!-- TODO: what happens when a Pawn is injected with SynthesizedOpium?-->
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SynthesizedOpiumHigh</hediffDef>
+					<severity>0.75</severity>
+					<toleranceChemical>SynthesizedOpium</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.4</offset>
+					<toleranceChemical>SynthesizedOpium</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SynthesizedOpiumTolerance</hediffDef>
+					<severity>0.044</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>MOP_SynthesizedOpiumProduction</researchPrerequisite>
+			<recipeUsers>
+				<li>MOP_MedicationSynthesisWorkstation</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<!-- TODO: Synth Opium costList-->
+			<Neutroamine>2</Neutroamine>
+			<Yayo>1</Yayo>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>SynthesizedOpium</chemical>
+				<addictiveness>0.08</addictiveness>
+				<minToleranceToAddict>0.03</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+				<listOrder>200</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.18</min>
+					<max>0.35</max>
+				</overdoseSeverityOffset>
+				<largeOverdoseChance>0.01</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+	<!-- TODO: Move the SynthOpium Hediff to a Hediff file?
+			Question becomes: Do we want the Hediffs centrally located or with the data/code they are relevant to?-->
+	<!-- does this provide an actual, happy high? -->
+
+	<!-- labelColor
+		   isBad
+		   stages-->
+	<HediffDef>
+		<defName>SynthesizedOpiumHigh</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>high on synthesized opium</label>
+		<labelNoun>a synthesized opium high</labelNoun>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.40</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0.1</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.20</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.50</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	<!-- TODO: ThoughtDef of SynthOpium high-->
+	<!-- is there a happy effect?? -->
+	<ThoughtDef>
+		<defName>SynthesizedOpiumHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>SynthesizedOpiumHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>high on synthesized opium</label>
+				<description>I feel numb and happy, there is no pain in me now.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- TODO: SynthesizedOpium ChemicalDef, addiction, tolerance, withdrawl -->
+	<ChemicalDef>
+		<defName>SynthesizedOpium</defName>
+		<label>synthesized opium</label>
+		<addictionHediff>SynthesizedOpiumAddiction</addictionHediff>
+		<toleranceHediff>SynthesizedOpiumTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+
+	<NeedDef ParentName="DrugAddictionNeedBase">
+		<defName>Chemical_SynthesizedOpium</defName>
+		<needClass>Need_Chemical</needClass>
+		<label>synthesized opium</label>
+		<description>Because of a synthetic opium addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+		<listPriority>45</listPriority>
+	</NeedDef>
+
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>SynthesizedOpiumTolerance</defName>
+		<label>synthesized opium tolerance</label>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.015</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>SynthesizedOpium</chemical>
+			</li>
+		</comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>ChemicalDamageModerate</hediff>
+				<minSeverity>0.50</minSeverity>
+				<baseMtbDays>120</baseMtbDays>
+				<partsToAffect>
+					<li>Brain</li>
+				</partsToAffect>
+			</li>
+		</hediffGivers>
+	</HediffDef>
+
+	<HediffDef ParentName="AddictionBase">
+		<defName>SynthesizedOpiumAddiction</defName>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<label>synthesized opium addiction</label>
+		<causesNeed>Chemical_SynthesizedOpium</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.04</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+				<painFactor>3</painFactor>
+				<restFallFactorOffset>0.3</restFallFactorOffset>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.50</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugExtreme</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
+					<li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>7</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<!-- TODO: Synth Opium, does it have withdrawl symptoms? -->
+		<defName>SynthesizedOpiumWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>SynthesizedOpiumAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>synthesized opium withdrawal</label>
+				<description>I'm all fuzzy and can't think straight. My limbs feel heavy, I'm tired and hungry, everything hurts. And why won't my eyes focus properly?</description>
+				<baseMoodEffect>-35</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>
