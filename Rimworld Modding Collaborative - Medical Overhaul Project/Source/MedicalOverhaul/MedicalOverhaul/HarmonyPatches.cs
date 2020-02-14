@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
 using Harmony;
 using RimWorld;
 using Verse;
@@ -32,22 +35,12 @@ namespace MedicalOverhaul
                         Pawn pawn = (Pawn)CheckForStateChange_Patch.pawn.GetValue(__instance);
                         if (dinfo2.HitPart.def.defName == "Lung")
                         {
-                            bool noLungs = true;
-                            foreach (var organ in pawn.health.hediffSet.GetNotMissingParts())
+                            if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.RespiratoryFailure))
                             {
-                                if (organ.def.defName == "Lung")
+                                Random random = new Random();
+                                if (random.Next(0, 100) < 20)
                                 {
-                                    noLungs = false;
-                                    break;
-                                }
-                            }
-                            if (noLungs == true)
-                            {
-                                if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.RespiratoryFailure))
-                                {
-                                    Hediff RespiratoryFailureHediff = HediffMaker.MakeHediff(HediffDefOf.RespiratoryFailure, pawn,  null);
-                                    pawn.health.AddHediff(RespiratoryFailureHediff);
-                                    Log.Message(pawn.Label + " receives hediff " + RespiratoryFailureHediff.Label);
+                                    HediffUtils.GiveRespiratoryFailure(pawn, "Torso", 7, 16);
                                 }
                             }
                         }
@@ -58,10 +51,7 @@ namespace MedicalOverhaul
                                 Random random = new Random();
                                 if (random.Next(0, 100) < 30)
                                 {
-
-                                    Hediff RespiratoryFailureHediff = HediffMaker.MakeHediff(HediffDefOf.RespiratoryFailure, pawn, null);
-                                    pawn.health.AddHediff(RespiratoryFailureHediff);
-                                    Log.Message(pawn.Label + " receives hediff " + RespiratoryFailureHediff.Label);
+                                    HediffUtils.GiveRespiratoryFailure(pawn, BodyPartDefOf.Neck.defName, 3, 9);
                                 }
                             }
                         }
@@ -70,5 +60,58 @@ namespace MedicalOverhaul
             }
         }
         public static FieldInfo pawn = typeof(Pawn_HealthTracker).GetField("pawn", BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.GetField);
+    }
+
+
+    [HarmonyPatch(typeof(Pawn_HealthTracker), "ShouldBeDeadFromRequiredCapacity")]
+    public static class ShouldBeDeadFromRequiredCapacityPatch
+    {
+        [HarmonyTranspiler]
+        public static IEnumerable<CodeInstruction> MedicalOverhaulException(IEnumerable<CodeInstruction> instrs, ILGenerator gen)
+        {
+            bool trigger = false;
+            foreach (CodeInstruction itr in instrs)
+            {
+                yield return itr;
+                if (trigger)
+                {
+                    trigger = false;
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldarg_0);
+                    yield return new CodeInstruction(OpCodes.Ldfld, AccessTools.Field(typeof(Pawn_HealthTracker), "pawn"));
+                    yield return new CodeInstruction(OpCodes.Ldloc_2);
+                    yield return new CodeInstruction(OpCodes.Callvirt, AccessTools.Method(typeof(ShouldBeDeadFromRequiredCapacityPatch), "AddCustomHediffs", new Type[] { typeof(Pawn_HealthTracker), typeof(Pawn), typeof(PawnCapacityDef) }));
+                    yield return itr;
+                }
+                if (itr.opcode == OpCodes.Callvirt && itr.operand == AccessTools.Method(typeof(PawnCapacitiesHandler), "CapableOf", new Type[] { typeof(PawnCapacityDef) }))
+                {
+                    trigger = true;
+                }
+            }
+        }
+
+        public static bool AddCustomHediffs(Pawn_HealthTracker tracker, Pawn pawn, PawnCapacityDef pawnCapacityDef)
+        {
+            if (pawn.RaceProps.IsFlesh && pawnCapacityDef.lethalFlesh && !tracker.capacities.CapableOf(pawnCapacityDef))
+            {
+                if (pawn.health.hediffSet.GetNotMissingParts().FirstOrDefault(p => p.def.defName == "Lung") == null)
+                {
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.RespiratoryFailure))
+                    {
+                        HediffUtils.GiveRespiratoryFailure(pawn, null, 3, 9);
+                    }
+                    else
+                    {
+                        Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.RespiratoryFailure);
+                        if (HediffUtils.getDeathTimeInHours(hediff) > 9f)
+                        {
+                            HediffUtils.GiveRespiratoryFailure(pawn, null, 3, 9);
+                        }
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }
