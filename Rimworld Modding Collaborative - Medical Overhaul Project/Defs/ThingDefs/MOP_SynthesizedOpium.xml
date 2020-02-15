@@ -39,7 +39,7 @@
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>SynthesizedOpiumHigh</hediffDef>
-					<severity>1</severity>
+					<severity>0.1</severity>
 					<toleranceChemical>Opioids</toleranceChemical>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
@@ -83,15 +83,15 @@
 	<HediffDef>
 		<defName>SynthesizedOpiumHigh</defName>
 		<hediffClass>HediffWithComps</hediffClass>
-		<label>Opioid High</label>
-		<labelNoun>An Opioid High from taking Synthetic Opium</labelNoun>
+		<label>Synthesized Opium Ingestion</label>
+		<labelNoun>An Opioid High from Ingesting Synthetic Opium</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>8.0</severityPerDay>
+        <severityPerDay>3.0</severityPerDay>
       </li>
     </comps>
       <stages>
