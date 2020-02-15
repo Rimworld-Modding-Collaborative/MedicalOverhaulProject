@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  
+  <!-- ============= Crafting ============= -->
+
+  <!--
+  <WorkGiverDef>
+    <defName>DoBillsMedicalMechanoidOperation</defName>
+    <label>operate on mechanoids</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>110</priorityInType>
+    <billGiversAllMechanoids>true</billGiversAllMechanoids>
+    <billGiversAllMechanoidsCorpses>true</billGiversAllMechanoidsCorpses>
+    <verb>modify</verb>
+    <gerund>modifying</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+  -->
+
+	<WorkGiverDef>
+    <defName>DoBillsMedicationSynthesisWorkstation</defName>
+    <label>Synthesize Medication</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+		<workTags>
+			<li>Intellectual</li>
+		</workTags>
+    <priorityInType>95</priorityInType>
+    <fixedBillGiverDefs>
+      <li>MOP_MedicationSynthesisWorkstation</li>
+    </fixedBillGiverDefs>
+    <verb>synthesize medication</verb>
+    <gerund>producing medication at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

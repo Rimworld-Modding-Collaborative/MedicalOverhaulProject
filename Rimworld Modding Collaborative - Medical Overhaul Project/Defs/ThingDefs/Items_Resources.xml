@@ -67,7 +67,7 @@
     <label>Opioids</label>
     <addictionHediff>OpioidAddiction</addictionHediff>
     <toleranceHediff>OpioidTolerance</toleranceHediff>
-		<onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+		<onGeneratedAddictedToleranceChance>0.6</onGeneratedAddictedToleranceChance>
 	</ChemicalDef>
   
   <NeedDef ParentName="MOP_DrugAddictionNeedBase">
