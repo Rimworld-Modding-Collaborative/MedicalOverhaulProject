@@ -11,47 +11,58 @@ namespace MedicalOverhaul
         {
             HediffComp_Immunizable hediffComp_Immunizable = hediff.TryGetComp<HediffComp_Immunizable>();
             if (hediffComp_Immunizable != null)
-            {
                 return 24f * (1.0f - hediff.Severity) / hediffComp_Immunizable.Props.severityPerDayNotImmune;
-            }
+
             return 0f;
         }
 
-        public static void setDeathTime(Hediff hediff, int? minHour = null, int? maxHour = null)
+        public static void setDeathTime(Hediff hediff, int minHour, int maxHour)
         {
-            if (minHour.HasValue && maxHour.HasValue)
+            HediffComp_Immunizable hediffComp_Immunizable = hediff.TryGetComp<HediffComp_Immunizable>();
+            if (hediffComp_Immunizable != null)
             {
-                HediffComp_Immunizable hediffComp_Immunizable = hediff.TryGetComp<HediffComp_Immunizable>();
-                if (hediffComp_Immunizable != null)
+                Random random = new Random();
+                float max = (1.0f - hediff.Severity) / ((((float)maxHour / 24) * 100) / 100);
+                float min = (1.0f - hediff.Severity) / ((((float)minHour / 24) * 100) / 100);
+                var next = random.NextDouble();
+                float deathTime = (float)(min + (next * (max - min))); // death time between min and max hours
+                try
                 {
-                    Random random = new Random();
-                    float max = (1.0f - hediff.Severity) / ((((float)maxHour / 24) * 100) / 100);
-                    float min = (1.0f - hediff.Severity) / ((((float)minHour / 24) * 100) / 100);
-                    var next = random.NextDouble();
-                    float deathTime = (float)(min + (next * (max - min))); // death time between min and max hours
-                    try
-                    {
-                        hediffComp_Immunizable.Props.severityPerDayNotImmune = deathTime;
-                    }
-                    catch (Exception ex)
-                    {
-                        Log.Message(ex.ToString());
-                        Log.Message(ex.StackTrace);
-                    }
+                    hediffComp_Immunizable.Props.severityPerDayNotImmune = deathTime;
+                }
+                catch (Exception ex)
+                {
+                    Log.Message(ex.ToString());
+                    Log.Message(ex.StackTrace);
                 }
             }
         }
-        public static void GiveHediffToPawn(Pawn pawn, HediffDef hediffDef, string partName = null, int? minHour = null, int? maxHour = null)
+        public static void GiveHediffToPawn(Pawn pawn, HediffDef hediffDef, BodyPartDef partDef = null, int? minHour = null, int? maxHour = null)
         {
-            BodyPartRecord part = null;
-            if (partName != null)
+            try
             {
-                part = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.defName == partName);
+                BodyPartRecord part = null;
+                if (partDef != null)
+                    part = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def == partDef);
+                Hediff hediff = HediffMaker.MakeHediff(hediffDef, pawn, part);
+                Log.Message(pawn.Label + " receives hediff " + hediff.Label);
+                if (minHour.HasValue && maxHour.HasValue)
+                {
+                    setDeathTime(hediff, minHour.Value, maxHour.Value);
+                    Log.Message(pawn.Label + " will die in (randomized) " +  getDeathTimeInHours(hediff).ToString() + " hours");
+                }
+                else
+                {
+                    Log.Message(pawn.Label + " will die in (not randomized) " +  getDeathTimeInHours(hediff).ToString() + " hours");
+                }
+                pawn.health.AddHediff(hediff);
             }
-            Hediff hediff = HediffMaker.MakeHediff(hediffDef, pawn, part);
-            setDeathTime(hediff, minHour, maxHour);
-            pawn.health.AddHediff(hediff);
-            Log.Message(pawn.Label + " receives hediff " + hediff.Label);
+            catch (Exception ex)
+            {
+                Log.Message(ex.ToString());
+                Log.Message(ex.StackTrace);
+            }
+
         }
     }
 }
