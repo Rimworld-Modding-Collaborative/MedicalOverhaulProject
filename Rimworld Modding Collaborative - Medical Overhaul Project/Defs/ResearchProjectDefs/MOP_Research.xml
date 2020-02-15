@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- TODO: Poppy Refining research-->
+	<ResearchProjectDef>
+		<defName>MOP_SynthesizedOpiumProduction</defName>
+		<label>drug synthesis</label>
+		<description>Refine poppy flowers into synthesized opium, typically used as in medicinal efforts.</description>
+		<baseCost>400</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>DrugProduction</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+</Defs>

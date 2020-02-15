@@ -60,4 +60,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(SolutionDir)..\..\About\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\About\" /Y /E
+xcopy "$(SolutionDir)..\..\Assemblies\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Assemblies\" /Y /E
+xcopy "$(SolutionDir)..\..\Defs\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Defs\" /Y /E
+xcopy "$(SolutionDir)..\..\Patches\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Patches\" /Y /E
+xcopy "$(SolutionDir)..\..\Textures\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Textures\" /Y /E
+
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>
