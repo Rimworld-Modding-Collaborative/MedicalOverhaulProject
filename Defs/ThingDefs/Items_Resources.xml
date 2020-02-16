@@ -113,6 +113,9 @@
       <li Class="HediffCompProperties_SeverityPerDay">
         <severityPerDay>-1</severityPerDay>
       </li>
+	  <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>-1</severityPerDayNotImmune>
+      </li>
     </comps>
     <stages>
       <li>
