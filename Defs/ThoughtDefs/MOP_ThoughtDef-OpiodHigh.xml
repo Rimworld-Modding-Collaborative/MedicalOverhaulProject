@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>OpioidHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>OpioidHigh</hediff>
+		<stages>
+			<li>
+				<label>Opioid Highs</label>
+				<description>I took an Opioid, Now I'm all warm and fuzzy inside but feel really heavy!.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

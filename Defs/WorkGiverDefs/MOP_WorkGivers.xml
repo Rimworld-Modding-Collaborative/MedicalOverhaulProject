@@ -1,10 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- ============= Crafting ============= -->
 
-  
-  <!-- ============= Crafting ============= -->
-
-  <!--
+	<!--
   <WorkGiverDef>
     <defName>DoBillsMedicalMechanoidOperation</defName>
     <label>operate on mechanoids</label>
@@ -23,25 +21,25 @@
   -->
 
 	<WorkGiverDef>
-    <defName>DoBillsMedicationSynthesisWorkstation</defName>
-    <label>Synthesize Medication</label>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Crafting</workType>
+		<defName>DoBillsMedicationSynthesisWorkstation</defName>
+		<label>Synthesize Medication</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Crafting</workType>
 		<workTags>
 			<li>Intellectual</li>
 		</workTags>
-    <priorityInType>95</priorityInType>
-    <fixedBillGiverDefs>
-      <li>MOP_MedicationSynthesisWorkstation</li>
-    </fixedBillGiverDefs>
-    <verb>synthesize medication</verb>
-    <gerund>producing medication at</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-    <prioritizeSustains>true</prioritizeSustains>
-  </WorkGiverDef>
-  
+		<priorityInType>95</priorityInType>
+		<fixedBillGiverDefs>
+			<li>MOP_MedicationSynthesisWorkstation</li>
+		</fixedBillGiverDefs>
+		<verb>synthesize medication</verb>
+		<gerund>producing medication at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
 	<WorkGiverDef>
 		<defName>MOP_WorkGiver_TakeProductOutOfUniversalFermenter</defName>
 		<label>empty deep tank fermenter</label>
@@ -54,7 +52,7 @@
 			<li>Manipulation</li>
 		</requiredCapacities>
 	</WorkGiverDef>
-	
+
 	<WorkGiverDef>
 		<defName>MOP_WorkGiver_FillUniversalFermenter</defName>
 		<label>fill deep tank fermenter</label>

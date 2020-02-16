@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <!--=========================== Medical Drug crops ==============================-->
-
 	<ThingDef ParentName="PlantBase">
 		<defName>Plant_Poppy</defName>
 		<label>Poppy Plant</label>

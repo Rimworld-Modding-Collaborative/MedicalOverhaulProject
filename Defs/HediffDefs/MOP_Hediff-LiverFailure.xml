@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="FailureBase">
+		<defName>LiverFailure</defName>
+		<label>Acute Liver Failure</label>
+		<lethalSeverity>1</lethalSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>3</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<lifeThreatening>true</lifeThreatening>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>near-death</label>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>

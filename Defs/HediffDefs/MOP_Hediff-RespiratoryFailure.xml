@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef ParentName="FailureBase">
+		<defName>RespiratoryFailure</defName>
+		<label>Respiratory Failure</label>
+		<lethalSeverity>0.8</lethalSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.35</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<lifeThreatening>true</lifeThreatening>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>near-death</label>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
