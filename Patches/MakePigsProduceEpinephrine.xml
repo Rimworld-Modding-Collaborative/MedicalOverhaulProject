@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Pig"]</xpath>
+			<value>
+				<comps>
+					<li Class="CompProperties_Milkable">
+						<milkDef>MOP_Epinephrine</milkDef>
+						<milkIntervalDays>2</milkIntervalDays>
+						<milkAmount>6</milkAmount>
+						<milkFemaleOnly>false</milkFemaleOnly>
+					</li>		
+				</comps>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
+			<value>
+				<li Class="CompProperties_Milkable">
+					<milkDef>MOP_Epinephrine</milkDef>
+					<milkIntervalDays>2</milkIntervalDays>
+					<milkAmount>6</milkAmount>
+					<milkFemaleOnly>false</milkFemaleOnly>
+				</li>		
+			</value>
+		</match>
+	</Operation>
+</Patch>

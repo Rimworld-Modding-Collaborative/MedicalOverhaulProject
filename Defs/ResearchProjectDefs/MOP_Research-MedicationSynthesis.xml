@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>MOP_MedicationSynthesis</defName>
+		<label>Medication Synthesis</label>
+		<description>Medication Synthesis unlocks Medication Synthesis Workstations which grants the ability to take certian raw plants and chemicals and synthesize either into useful chemicals or directly into medication or medicinal form.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>DrugProduction</li>
+			<li>Electricity</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+</Defs>

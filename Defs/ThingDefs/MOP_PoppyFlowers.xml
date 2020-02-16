@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MOP_RawFruitBase">
+		<defName>PoppyFlowers</defName>
+		<label>Poppy Flowers</label>
+		<description>Raw Poppy Flowers and Blubs harvested after Milking.</description>
+		<graphicData>
+			<texPath>Things/Veg/PoppyFlowers/PoppyFlowers</texPath>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<MarketValue>6</MarketValue>
+		</statBases>
+		<ingestible>
+			<foodType>Plant</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<comps>
+			<li Class="CompExtraRecipeProducts.CompProperties_ExtraRecipeProducts">
+				<ExtraProducts>
+					<li>
+						<productdef>RawPoppies</productdef>
+						<Min>0</Min>
+						<Max>6</Max>
+					</li>
+					<li>
+						<productdef>PoppyMilk</productdef>
+						<Min>0</Min>
+						<Max>2</Max>
+					</li>
+				</ExtraProducts>
+			</li>
+		</comps>
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>SynthesizedOpiumIngestion</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>SynthesizedOpiumIngestion</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Synthesized Opium Consumption</label>
+				<description>OH GOD, I knew I shouldnt have taken that! What have I done?!?!.</description>
+				<baseMoodEffect>-45</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

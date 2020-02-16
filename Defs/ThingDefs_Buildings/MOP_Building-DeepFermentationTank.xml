@@ -1,0 +1,72 @@
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MOP_DeepFermentationTank</defName>
+    <label>Deep Fermentation Tank</label>
+    <description>A deep fermentation tank for fermenting raw ingredients into antibiotic.</description>
+	<thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
+	<stuffCategories>
+		<li>Metallic</li>
+		<li>Woody</li>
+		<li>Stony</li>
+	</stuffCategories>
+	<costStuffCount>20</costStuffCount>
+	<altitudeLayer>Building</altitudeLayer>
+	<fillPercent>0.6</fillPercent>
+	<useHitPoints>True</useHitPoints>
+	<statBases>
+		<Mass>4</Mass>
+		<MaxHitPoints>75</MaxHitPoints>
+		<WorkToBuild>500</WorkToBuild>
+		<Flammability>1.0</Flammability>
+	</statBases>
+	<designationCategory>Production</designationCategory>
+	<passability>PassThroughOnly</passability>
+	<hasInteractionCell>True</hasInteractionCell>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>	
+	<pathCost>70</pathCost>
+	<building>
+		<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
+		<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
+	</building>
+	<comps>
+		<li Class="MedicalOverhaul.CompProperties_UniversalFermenter">
+			<products>
+				<li>
+					<thingDef>PenicilliumMold</thingDef>
+					<ingredientFilter>
+          			   <categories>
+							<li>PlantFoodRaw</li>
+          			   </categories>
+					</ingredientFilter>
+					<maxCapacity>75</maxCapacity>
+					<baseFermentationDuration>40500</baseFermentationDuration>
+					<temperatureIdeal>
+						<min>10</min>
+						<max>100</max>
+					</temperatureIdeal>
+					<temperatureSafe>
+						<min>-50</min>
+						<max>200</max>
+					</temperatureSafe>
+				</li>
+			</products>
+		</li>
+		<li Class="CompProperties_Forbiddable"/>
+	</comps>
+	<tickerType>Rare</tickerType>
+	<rotatable>true</rotatable>
+    <researchPrerequisites>
+      <li>MOP_DeepFermentationTankResearch</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

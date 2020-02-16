@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>SynthesizedOpium</defName>
+		<label>Synthesized Opium</label>
+		<description>A synthetic derivative of the poppy plant, used for further production of Opioid Medications, Sunthesized Opium is the most potent form and can be extremly detrimental or even fatal to health if ingested.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/SynthesizedOpium</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>2000</WorkToMake>
+			<MarketValue>40</MarketValue>
+			<Mass>0.1</Mass>
+			<Nutrition>0.3</Nutrition>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed, Fluid</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.50</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<baseIngestTicks>240</baseIngestTicks>
+			<ingestSound>Ingest_Inject</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Inject {0}</ingestCommandString>
+			<ingestReportString>Injecting {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
+					<severity>0.1</severity>
+					<toleranceChemical>Opioids</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>OpioidTolerance</hediffDef>
+					<severity>0.085</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>MOP_MedicationSynthesis</researchPrerequisite>
+			<skillRequirements>
+				<Medicine>6</Medicine>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>MOP_MedicationSynthesisWorkstation</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<RawPoppies>18</RawPoppies>
+			<PoppyMilk>4</PoppyMilk>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Opioids</chemical>
+				<addictiveness>0.8</addictiveness>
+				<minToleranceToAddict>0</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+				<listOrder>200</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.18</min>
+					<max>0.35</max>
+				</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

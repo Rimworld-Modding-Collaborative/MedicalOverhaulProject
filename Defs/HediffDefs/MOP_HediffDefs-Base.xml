@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef Name="FailureBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1, 0.35, 0.35)</defaultLabelColor>
+		<initialSeverity>0.001</initialSeverity>
+		<everCurableByItem>false</everCurableByItem>
+	</HediffDef>
+</Defs>
