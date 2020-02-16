@@ -35,7 +35,6 @@
 	<interactionCellOffset>(0,0,-1)</interactionCellOffset>	
 	<pathCost>70</pathCost>
 	<building>
-		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
 		<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
 	</building>
@@ -59,7 +58,6 @@
 						<min>-50</min>
 						<max>200</max>
 					</temperatureSafe>
-					<graphSuffix>_full</graphSuffix>
 				</li>
 			</products>
 		</li>
