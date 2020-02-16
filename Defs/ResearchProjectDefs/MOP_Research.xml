@@ -14,4 +14,17 @@
 		<researchViewX>3</researchViewX>
 		<researchViewY>0.5</researchViewY>
 	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>MOP_DeepFermentationTankResearch</defName>
+		<label>Deep Fermentation Tank</label>
+		<description>Learn how to build a distillery to brew the strongest of alcohols and spirits!</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+ 		<researchViewX>2</researchViewX>
+		<researchViewY>5</researchViewY>
+	</ResearchProjectDef>
 </Defs>
