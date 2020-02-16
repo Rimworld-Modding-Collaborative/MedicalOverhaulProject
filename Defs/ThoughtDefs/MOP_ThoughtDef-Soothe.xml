@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+    <defName>MOP_AntidepressantsHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MOP_Soothe</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Antidepressant calm</label>
+        <description>Antidepressant makes me feel more relaxed.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>
