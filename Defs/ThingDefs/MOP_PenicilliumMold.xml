@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="MOP_RawFruitBase">
+    <defName>PenicilliumMold</defName>
+    <label>Penicillium Mold</label>
+    <description>Penicillium Mold is grown on food in a Deep Fermentation Tank, a specific type of mold that can be synthesized into Antibiotics which are used to fight infections and deseases</description>
+    <graphicData>
+    <texPath>Things/Veg/PoppyFlowers/PoppyFlowers</texPath>
+    </graphicData>
+	<tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>14</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+		</ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+	<statBases>
+		<Mass>0.01</Mass>
+		<Nutrition>0.01</Nutrition>
+		<FoodPoisonChanceFixedHuman>1.0</FoodPoisonChanceFixedHuman>
+	</statBases>
+  </ThingDef>
+
+</Defs>
