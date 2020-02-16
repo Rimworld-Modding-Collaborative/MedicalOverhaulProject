@@ -440,7 +440,7 @@ namespace MedicalOverhaul
 				{
 					text += this.Product.graphSuffix;
 				}
-				TexReloader.Reload(this.parent, text);
+				//TexReloader.Reload(this.parent, text);
 			}
 		}
 
