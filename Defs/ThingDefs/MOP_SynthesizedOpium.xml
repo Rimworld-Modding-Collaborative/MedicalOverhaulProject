@@ -38,7 +38,7 @@
 			<useEatingSpeedStat>false</useEatingSpeedStat>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>SynthesizedOpiumHigh</hediffDef>
+					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
 					<severity>0.1</severity>
 					<toleranceChemical>Opioids</toleranceChemical>
 				</li>
@@ -81,7 +81,7 @@
 	</ThingDef>
 
 	<HediffDef>
-		<defName>SynthesizedOpiumHigh</defName>
+		<defName>SynthesizedOpiumIngestion</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Synthesized Opium Ingestion</label>
 		<labelNoun>An Opioid High from Ingesting Synthetic Opium</labelNoun>
@@ -182,9 +182,9 @@
 	</HediffDef>
 	
 	<ThoughtDef>
-		<defName>SynthesizedOpiumHigh</defName>
+		<defName>SynthesizedOpiumIngestion</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>SynthesizedOpiumHigh</hediff>
+		<hediff>SynthesizedOpiumIngestion</hediff>
 		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>
