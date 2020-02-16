@@ -41,5 +41,31 @@
     </requiredCapacities>
     <prioritizeSustains>true</prioritizeSustains>
   </WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>MOP_WorkGiver_TakeProductOutOfUniversalFermenter</defName>
+		<label>empty deep tank fermenter</label>
+		<giverClass>MedicalOverhaul.WorkGiver_TakeProductOutOfUniversalFermenter</giverClass>
+		<workType>Hauling</workType>
+		<verb>take product</verb>
+		<gerund>taking product from</gerund>
+		<priorityInType>26</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>MOP_WorkGiver_FillUniversalFermenter</defName>
+		<label>fill deep tank fermenter</label>
+		<giverClass>MedicalOverhaul.WorkGiver_FillUniversalFermenter</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>25</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
 
 </Defs>
