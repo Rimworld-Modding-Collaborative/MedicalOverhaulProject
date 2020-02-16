@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>MOP_Narcan</defName>
+    <label>Narcan</label>
+    <description>Narcan is an Opioid receptor blocker, Narcan has the chance of stopping or preventing opioid overdoses.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Penoxycyline</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>false</socialPropernessMatters>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>1200</WorkToMake>
+      <MarketValue>100</MarketValue>
+      <Mass>0.005</Mass>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+	 <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_RemoveHediff">
+          <chance>0.4</chance>
+          <hediffDef>SynthesizedOpiumIngestion</hediffDef>
+        </li>
+        <li Class="IngestionOutcomeDoer_RemoveHediff">
+          <chance>0.7</chance>
+          <hediffDef>OpioidHigh</hediffDef>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AdministeredNarcan</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+			<researchPrerequisite>MOP_MedicationSynthesis</researchPrerequisite>
+      <recipeUsers>
+        <li>MOP_MedicationSynthesisWorkstation</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Neutroamine>4</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>1000</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>AdministeredNarcan</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Administered Narcan</label>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <makeImmuneTo>
+					<li>SynthesizedOpiumIngestion</li>
+					<li>OpioidHigh</li>
+			</makeImmuneTo>
+				</li>
+      </stages>
+  </HediffDef>
+  
+</Defs>

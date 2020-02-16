@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=========================== Medical Drug crops ==============================-->
+
+	<ThingDef ParentName="PlantBase">
+		<defName>Plant_Poppy</defName>
+		<label>Poppy Plant</label>
+		<description>A Plant that upon harvesting produces both Poppy milk and Raw Poppies, Poppy milk can be ingested directly or cooked into Poppy Tea, Raw Poppies can be synthesized into synthesized opium which can then be crafted to make a wide variety of Opioids.</description>
+		<statBases>
+			<MaxHitPoints>95</MaxHitPoints>
+      <Nutrition>0.15</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/PoppyPlants</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<ingestible />
+		<plant>
+			<immatureGraphicPath>Things/Plants/PoppyPlants</immatureGraphicPath>
+			<growDays>10.50</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestWork>20</harvestWork>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>PoppyFlowers</harvestedThingDef>
+			<harvestYield>1</harvestYield>
+			<sowMinSkill>4</sowMinSkill>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>1.0</max>
+			</visualSizeRange>
+      <wildOrder>2</wildOrder>
+		</plant>
+	</ThingDef>
+	
+</Defs>

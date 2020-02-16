@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+    <identifier>Rimworld Modding Collaborative - Medical Overhaul Project</identifier>
+    <version>Alpha 0.1</version>
+    <loadAfter>
+        <li>Core</li>
+        <li>HugsLib</li>
+        <li>JecsTools</li>
+    </loadAfter>
+	<showCrossPromotions>false</showCrossPromotions>
+    <manifestUri>https://raw.githubusercontent.com/Rimworld-Modding-Collaborative/MedicalOverhaulProject/Development-Branch/Rimworld%20Modding%20Collaborative%20-%20Medical%20Overhaul%20Project/About/Manifest.xml</manifestUri>
+    <downloadUri>https://github.com/Rimworld-Modding-Collaborative/MedicalOverhaulProject/releases/latest</downloadUri>
+</Manifest>

@@ -1,0 +1,7 @@
+
+*.txt
+*.cache
+*.pxd
+
+.vs/
+Rimworld Modding Collaborative - Medical Overhaul Project/Source/MedicalOverhaul/MedicalOverhaul/obj/

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--=============== Poppy Milk ====================-->
+
+ <ThingDef ParentName="MOP_RawFruitBase">
+    <defName>PoppyMilk</defName>
+    <label>Poppy Milk</label>
+    <description>Milk of the poppy, The base fluid drained from matured poppy bulbs, has Opioid like qualities, if taken too often, it can generate a mild addiction.</description>
+    <tradeability>Sellable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <tickerType>Rare</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/PoppyMilk</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.1</Mass>
+			<DeteriorationRate>4</DeteriorationRate>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <ingestible>
+			<baseIngestTicks>100</baseIngestTicks>
+			<chairSearchRadius>10</chairSearchRadius>
+      <preferability>RawTasty</preferability>
+      <tasteThought></tasteThought>
+      <foodType>VegetableOrFruit</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.8</joy>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>OpioidHigh</hediffDef>
+          <severity>0.50</severity>
+          <toleranceChemical>Opioids</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>OpioidTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>30</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Drug">
+				<chemical>Opioids</chemical>
+				<addictiveness>0.060</addictiveness>
+				<minToleranceToAddict>0.15</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+				<needLevelOffset>1</needLevelOffset>
+				<listOrder>30</listOrder>
+			</li>
+		</comps>
+  </ThingDef>
+
+<!-- Poppy Milk Addiction -->
+
+  <ChemicalDef>
+    <defName>Opioids</defName>
+    <label>Opioids</label>
+    <addictionHediff>OpioidAddiction</addictionHediff>
+    <toleranceHediff>OpioidTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.6</onGeneratedAddictedToleranceChance>
+	</ChemicalDef>
+  
+  <NeedDef ParentName="MOP_DrugAddictionNeedBase">
+    <defName>Chemical_Opioids</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Opioid Addiction</label>
+    <description>Because of a Opioid addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <listPriority>45</listPriority>
+  </NeedDef>
+
+
+  <HediffDef ParentName="MOP_DrugToleranceBase">
+    <defName>OpioidTolerance</defName>
+    <label>Poppy Milk Tolerance</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Opioids</chemical>
+      </li>
+    </comps>
+		<hediffGivers>
+			<li Class="HediffGiver_RandomDrugEffect">
+				<hediff>ChemicalDamageModerate</hediff>
+				<minSeverity>0.50</minSeverity>
+				<baseMtbDays>120</baseMtbDays>
+				<partsToAffect>
+					<li>Brain</li>
+				</partsToAffect>
+			</li>
+		</hediffGivers>
+  </HediffDef>
+
+<HediffDef>
+    <defName>OpioidHigh</defName>
+    <label>Opioid High</label>
+	<defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>  	
+	<hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+      </li>
+	  <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>-1</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Coming Down</label>
+        <vomitMtbDays>0.4</vomitMtbDays>
+        <painOffset>0.4</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+                <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Eating</capacity>
+           <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Heavy Feeling High</label>
+        <minSeverity>0.2</minSeverity>
+        <vomitMtbDays>0.4</vomitMtbDays>
+        <painOffset>-0.4</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Talking</capacity>
+            <offset>-0.25</offset>
+          </li>
+          <li>
+            <capacity>Eating</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="MOP_AddictionBase">
+    <defName>OpioidAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>Opioid Addiction</label>
+    <causesNeed>Chemical_Opioids</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.04</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <painFactor>3</painFactor>
+        <restFallFactorOffset>0.3</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.50</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugExtreme</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>7</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <ThoughtDef>
+    <defName>OpioidHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>OpioidHigh</hediff>
+    <stages>
+      <li>
+        <label>Opioid Highs</label>
+        <description>I took an Opioid, Now I'm all warm and fuzzy inside but feel really heavy!.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+<!--=============== Raw Poppies ====================-->
+
+<ThingDef ParentName="MOP_RawFruitBase">
+    <defName>RawPoppies</defName>
+    <label>Raw Poppies</label>
+    <description>Raw Poppy Flowers and Blubs harvested before Milking.</description>
+    <graphicData>
+    <texPath>Things/Veg/PoppyFlowers/PoppyFlowers</texPath>
+    </graphicData>
+	<tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+		</ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>13</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+  </ThingDef>
+
+<ThingDef ParentName="MOP_RawFruitBase">
+    <defName>PoppyFlowers</defName>
+    <label>Poppy Flowers</label>
+    <description>Raw Poppy Flowers and Blubs harvested after Milking.</description>
+    <graphicData>
+    <texPath>Things/Veg/PoppyFlowers/PoppyFlowers</texPath>
+    </graphicData>
+	<tickerType>Normal</tickerType>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Plant</foodType>
+      <preferability>NeverForNutrition</preferability>
+		</ingestible>
+    <comps>
+	  <li Class="CompExtraRecipeProducts.CompProperties_ExtraRecipeProducts">
+		<ExtraProducts>
+			<li>
+				<productdef>RawPoppies</productdef>
+				<Min>0</Min>
+				<Max>6</Max>
+			</li>
+			<li>
+				<productdef>PoppyMilk</productdef>
+				<Min>0</Min>
+				<Max>2</Max>
+			</li>
+		</ExtraProducts>
+	  </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+  </ThingDef>
+
+</Defs>

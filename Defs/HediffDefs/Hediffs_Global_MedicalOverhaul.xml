@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef Name="FailureBase" Abstract="True">
+		<hediffClass>HediffWithComps</hediffClass>
+		<defaultLabelColor>(1, 0.35, 0.35)</defaultLabelColor>
+		<initialSeverity>0.001</initialSeverity>
+		<everCurableByItem>false</everCurableByItem>
+	</HediffDef>
+
+	<HediffDef ParentName="FailureBase">
+		<defName>RespiratoryFailure</defName>
+		<label>Respiratory Failure</label>
+		<lethalSeverity>0.8</lethalSeverity>
+		<comps>
+			<li Class="HediffCompProperties_Immunizable">
+				<severityPerDayNotImmune>0.35</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<lifeThreatening>true</lifeThreatening>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>near-death</label>
+				<lifeThreatening>true</lifeThreatening>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="FailureBase">
+    <defName>IntestinalFailure</defName>
+    <label>Intestinal Failure</label>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.34</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <lifeThreatening>true</lifeThreatening>
+      </li>
+      <li>
+		<minSeverity>0.3</minSeverity>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+		<minSeverity>0.6</minSeverity>
+		<label>near-death</label>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="FailureBase">
+    <defName>LiverFailure</defName>
+    <label>Acute Liver Failure</label>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>3</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <lifeThreatening>true</lifeThreatening>
+      </li>
+      <li>
+		<minSeverity>0.5</minSeverity>
+		<label>near-death</label>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="FailureBase">
+    <defName>RenalFailure</defName>
+    <label>Acute Renal failure</label>
+    <lethalSeverity>1</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.2</severityPerDayNotImmune>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <lifeThreatening>true</lifeThreatening>
+      </li>
+      <li>
+		<minSeverity>0.6</minSeverity>
+		<label>near-death</label>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>
