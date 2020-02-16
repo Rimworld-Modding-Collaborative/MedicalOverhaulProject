@@ -22,12 +22,20 @@
       <drugCategory>Medical</drugCategory>
 	 <outcomeDoers>
         <li Class="IngestionOutcomeDoer_RemoveHediff">
-          <chance>0.4</chance>
+          <chance>1</chance>
+		  <range>
+			  <min>0.25</min>
+			  <max>1</max>
+		  </range>
           <hediffDef>SynthesizedOpiumIngestion</hediffDef>
         </li>
         <li Class="IngestionOutcomeDoer_RemoveHediff">
-          <chance>0.7</chance>
-          <hediffDef>OpioidHigh</hediffDef>
+          <chance>1</chance>
+		  <range>
+			  <min>0.5</min>
+			  <max>1</max>
+		  </range>
+          <hediffDef>OpioidAddiction</hediffDef>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>AdministeredNarcan</hediffDef>
