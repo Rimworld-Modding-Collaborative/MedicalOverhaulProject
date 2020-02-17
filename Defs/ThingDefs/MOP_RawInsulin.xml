@@ -19,16 +19,6 @@
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
 			<foodType>AnimalProduct, Fluid</foodType>
-			<outcomeDoers>
-				<li Class="IngestionOutcomeDoer_RemoveHediff">
-					<chance>1</chance>
-					<range>
-						<min>0.25</min>
-						<max>1</max>
-					</range>
-					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
-				</li>
-			</outcomeDoers>
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Drug">
