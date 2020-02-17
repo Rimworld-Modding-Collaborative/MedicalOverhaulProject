@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MOP_RawInsulin</defName>
+		<label>RawInsulin</label>
+		<description>RawInsulin description placeholder</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/RawInsulin</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1200</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<foodType>AnimalProduct, Fluid</foodType>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_RemoveHediff">
+					<chance>1</chance>
+					<range>
+						<min>0.25</min>
+						<max>1</max>
+					</range>
+					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
