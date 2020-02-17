@@ -65,7 +65,7 @@
 		<comps>
 			<li Class="CompProperties_Drug">
 				<chemical>Opioids</chemical>
-				<addictiveness>0.8</addictiveness>
+				<addictiveness>0.9</addictiveness>
 				<minToleranceToAddict>0</minToleranceToAddict>
 				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
 				<needLevelOffset>1</needLevelOffset>

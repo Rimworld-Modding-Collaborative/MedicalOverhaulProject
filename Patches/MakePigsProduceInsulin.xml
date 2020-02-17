@@ -7,9 +7,9 @@
 			<value>
 				<comps>
 					<li Class="CompProperties_Milkable">
-						<milkDef>MOP_Epinephrine</milkDef>
-						<milkIntervalDays>2</milkIntervalDays>
-						<milkAmount>6</milkAmount>
+						<milkDef>MOP_Insulin</milkDef>
+						<milkIntervalDays>6</milkIntervalDays>
+						<milkAmount>12</milkAmount>
 						<milkFemaleOnly>false</milkFemaleOnly>
 					</li>		
 				</comps>
@@ -19,9 +19,9 @@
 			<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
 			<value>
 				<li Class="CompProperties_Milkable">
-					<milkDef>MOP_Epinephrine</milkDef>
-					<milkIntervalDays>2</milkIntervalDays>
-					<milkAmount>6</milkAmount>
+					<milkDef>MOP_Insulin</milkDef>
+					<milkIntervalDays>6</milkIntervalDays>
+					<milkAmount>12</milkAmount>
 					<milkFemaleOnly>false</milkFemaleOnly>
 				</li>		
 			</value>
