@@ -17,5 +17,8 @@
 	<UF_WeatherRain>rain</UF_WeatherRain>
 	<UF_WeatherSnow>snow</UF_WeatherSnow>
 	<UF_WeatherWind>wind</UF_WeatherWind>
+	
+	<!-- Extract Raw Insulin -->
+	<ERI_RawInsulinFullness>Raw Insulin Fullness</ERI_RawInsulinFullness>
 
 </LanguageData>
