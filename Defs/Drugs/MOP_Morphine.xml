@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MOP_Morphine</defName>
+		<label>morphine</label>
+		<description>Morphine is a strong painkiller with highly addictive qualities</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/Morphine</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<WorkToMake>500</WorkToMake>
+			<MarketValue>25</MarketValue>
+			<Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>MOP_Soothe</hediffDef>
+					<severity>1.0</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>MedicationSynthesis</researchPrerequisite>
+			<recipeUsers>
+				<li>MOP_MedicationSynthesisWorkbench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Neutroamine>6</Neutroamine>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>
+					<min>0.08</min>
+					<max>0.14</max>
+				</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>
