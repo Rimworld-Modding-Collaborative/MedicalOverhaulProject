@@ -60,7 +60,10 @@ namespace MedicalOverhaul
                 PawnData data = new PawnData();
                 bool exists = this.PawnsData.TryGetValue(pawn, out data);
                 if (data.daysCounter > 60)
+                {
                     data.totalChronicDiseases = 0;
+                    data.daysCounter = 0;
+                }
                 if (exists == true)
                 {
                     if (data.totalChronicDiseases < 3)
