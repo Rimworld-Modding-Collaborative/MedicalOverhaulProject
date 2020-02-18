@@ -4,6 +4,7 @@
 		<defName>SynthesizedOpiumIngestion</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Synthesized Opium Ingestion</label>
+		<description>The result of ingesting Synthesized Opium prior to it being processed into the proper drug form.</description>
 		<labelNoun>An Opioid High from Ingesting Synthetic Opium</labelNoun>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>

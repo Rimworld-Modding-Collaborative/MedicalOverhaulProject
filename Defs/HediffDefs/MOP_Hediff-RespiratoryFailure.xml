@@ -3,6 +3,7 @@
 	<HediffDef ParentName="FailureBase">
 		<defName>RespiratoryFailure</defName>
 		<label>Respiratory Failure</label>
+		<description>The respiratory system has failed.</description>
 		<lethalSeverity>0.8</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_Immunizable">

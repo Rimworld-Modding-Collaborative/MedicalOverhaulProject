@@ -3,6 +3,7 @@
 	<HediffDef>
 		<defName>PoppyMilkHigh</defName>
 		<label>Poppy Milk High</label>
+		<description>The high obtained from ingesting the milk of a Poppy pod.</description>
 		<defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>true</scenarioCanAdd>

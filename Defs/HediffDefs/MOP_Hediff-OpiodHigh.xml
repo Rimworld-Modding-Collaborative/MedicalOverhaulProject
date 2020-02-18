@@ -3,6 +3,7 @@
 	<HediffDef>
 		<defName>OpioidHigh</defName>
 		<label>Opioid High</label>
+		<description>This Pawn is currently high on Opioids.</description>
 		<defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>true</scenarioCanAdd>
