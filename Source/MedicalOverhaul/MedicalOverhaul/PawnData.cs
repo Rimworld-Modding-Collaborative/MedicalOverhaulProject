@@ -9,12 +9,12 @@ namespace MedicalOverhaul
         {
         }
 
-        public PawnData(int totalChronicDiseases)
+        public PawnData(int totalChronicDiseases, int daysCounter)
         {
             this.totalChronicDiseases = totalChronicDiseases;
+            this.daysCounter = daysCounter;
         }
-
-        public void ExposeData()
+    public void ExposeData()
         {
             Scribe_Values.Look<int>(ref this.totalChronicDiseases, "totalChronicDiseases", 0, true);
             Scribe_Values.Look<int>(ref this.daysCounter, "daysCounter", 0, true);
