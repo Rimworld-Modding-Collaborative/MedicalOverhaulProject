@@ -77,6 +77,7 @@ namespace MedicalOverhaul
                     Log.Message(pawn.Label + " missing in PawnsData, adding...");
                     PawnData values = new PawnData();
                     values.totalChronicDiseases = 0;
+                    values.daysCounter = 0;
                     this.PawnsData.Add(pawn, values);
                 }
                 data.daysCounter += 1;
