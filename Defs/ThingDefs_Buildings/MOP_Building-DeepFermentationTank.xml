@@ -34,10 +34,6 @@
 	<hasInteractionCell>True</hasInteractionCell>
 	<interactionCellOffset>(0,0,-1)</interactionCellOffset>	
 	<pathCost>70</pathCost>
-	<building>
-		<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
-		<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
-	</building>
 	<comps>
 		<li Class="MedicalOverhaul.CompProperties_UniversalFermenter">
 			<products>

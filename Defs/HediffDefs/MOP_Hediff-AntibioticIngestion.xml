@@ -4,6 +4,7 @@
 		<defName>AntibioticIngestion</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Antibiotics</label>
+		<description>Taking antibiotics.</description>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

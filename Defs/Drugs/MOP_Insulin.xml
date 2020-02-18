@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugBase">
+	<ThingDef ParentName="MOP_MakeableDrugFluidBase">
 		<defName>MOP_Insulin</defName>
 		<label>Insulin</label>
 		<description>Insulin description placeholder</description>
@@ -19,6 +19,19 @@
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
 		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>MOP_MedicationSynthesis</researchPrerequisite>
+			<skillRequirements>
+				<Medicine>6</Medicine>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+			<recipeUsers>
+				<li>MOP_MedicationSynthesisWorkstation</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<MOP_RawInsulin>3</MOP_RawInsulin>
+		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">
 				<listOrder>1000</listOrder>
