@@ -39,6 +39,7 @@
       <HintPath>..\..\..\1.1\Assemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <HintPath>D:\GAMES\RimWorld v1.1.2547\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -58,13 +59,5 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(SolutionDir)..\..\About\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\About\" /Y /E
-xcopy "$(SolutionDir)..\..\Assemblies\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Assemblies\" /Y /E
-xcopy "$(SolutionDir)..\..\Defs\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Defs\" /Y /E
-xcopy "$(SolutionDir)..\..\Patches\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Patches\" /Y /E
-xcopy "$(SolutionDir)..\..\Textures\*.*" "$(SolutionDir)..\..\..\..\..\Mods\$(SolutionName)\Textures\" /Y /E
-
-</PostBuildEvent>
   </PropertyGroup>
 </Project>
