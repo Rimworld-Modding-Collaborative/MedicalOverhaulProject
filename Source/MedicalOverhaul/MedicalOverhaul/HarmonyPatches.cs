@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
-using Harmony;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -14,7 +14,7 @@ namespace MedicalOverhaul
     {
         static HarmonyPatches()
         {
-            HarmonyInstance harmonyInstance = HarmonyInstance.Create("rimworld.MedicalOverhaul.org");
+            Harmony harmonyInstance = new Harmony("rimworld.MedicalOverhaul.org");
             harmonyInstance.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
@@ -143,7 +143,7 @@ namespace MedicalOverhaul
                     result = true;
                 }
             }
-            return result;
+            return result; 
         }
     }
 }

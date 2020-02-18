@@ -87,7 +87,6 @@ namespace MedicalOverhaul
 			}
 		}
 
-		// (set) Token: 0x0600000B RID: 11 RVA: 0x000020EE File Offset: 0x000002EE
 		public float Progress
 		{
 			get
@@ -440,7 +439,7 @@ namespace MedicalOverhaul
 				{
 					text += this.Product.graphSuffix;
 				}
-				TexReloader.Reload(this.parent, text);
+				//TexReloader.Reload(this.parent, text);
 			}
 		}
 
@@ -521,7 +520,7 @@ namespace MedicalOverhaul
 				{
 					defaultLabel = "DEBUG: Finish",
 					activateSound = SoundDef.Named("Click"),
-					action = delegate()
+                    action = delegate()
 					{
 						this.Progress = 1f;
 					}

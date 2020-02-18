@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
 	<ThingDef ParentName="MakeableDrugBase">
 		<defName>SynthesizedOpium</defName>
 		<label>Synthesized Opium</label>
@@ -18,9 +17,9 @@
 		</statBases>
 		<techLevel>Industrial</techLevel>
 		<ingestible>
-		<preferability>DesperateOnly</preferability>
-		<tasteThought></tasteThought>
-		<foodType>Processed, Fluid</foodType>
+			<preferability>DesperateOnly</preferability>
+			<tasteThought></tasteThought>
+			<foodType>Processed, Fluid</foodType>
 			<joyKind>Chemical</joyKind>
 			<joy>0.50</joy>
 			<nurseable>true</nurseable>
@@ -54,7 +53,7 @@
 			<skillRequirements>
 				<Medicine>6</Medicine>
 				<Crafting>2</Crafting>
-      </skillRequirements>
+			</skillRequirements>
 			<recipeUsers>
 				<li>MOP_MedicationSynthesisWorkstation</li>
 			</recipeUsers>
@@ -66,7 +65,7 @@
 		<comps>
 			<li Class="CompProperties_Drug">
 				<chemical>Opioids</chemical>
-				<addictiveness>0.8</addictiveness>
+				<addictiveness>0.9</addictiveness>
 				<minToleranceToAddict>0</minToleranceToAddict>
 				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
 				<needLevelOffset>1</needLevelOffset>
@@ -79,233 +78,4 @@
 			</li>
 		</comps>
 	</ThingDef>
-
-	<HediffDef>
-		<defName>SynthesizedOpiumIngestion</defName>
-		<hediffClass>HediffWithComps</hediffClass>
-		<label>Synthesized Opium Ingestion</label>
-		<labelNoun>An Opioid High from Ingesting Synthetic Opium</labelNoun>
-		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
-		<scenarioCanAdd>true</scenarioCanAdd>
-		<maxSeverity>1.0</maxSeverity>
-		<isBad>false</isBad>
-		<comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>3.0</severityPerDay>
-      </li>
-	  <li Class="HediffCompProperties_Immunizable">
-        <severityPerDayNotImmune>3.0</severityPerDayNotImmune>
-      </li>
-    </comps>
-      <stages>
-        <li>
-          <label>Difficulty Breathing</label>
-        </li>
-		
-        <li>
-          <minSeverity>0.1</minSeverity>
-          <label>Trembling</label>
-          <painOffset>-0.2</painOffset>
-		  <vomitMtbDays>0.05</vomitMtbDays>
-            <capMods>
-			   <li>
-                <capacity>Manipulation</capacity>
-                <offset>-0.02</offset>
-              </li>
-			   <li>
-                <capacity>Moving</capacity>
-                <offset>-0.02</offset>
-              </li>
-            </capMods>
-        </li>
-		
-        <li>
-          <minSeverity>0.25</minSeverity>
-          <label>Shaking</label>
-          <painOffset>0.2</painOffset>
-		  <vomitMtbDays>0.1</vomitMtbDays>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>-0.10</offset>
-              </li>
-              <li>
-                <capacity>Moving</capacity>
-                <offset>-0.1</offset>
-              </li>
-			   <li>
-                <capacity>Manipulation</capacity>
-                <offset>-0.1</offset>
-              </li>
-            </capMods>
-        </li>
-		
-        <li>
-          <minSeverity>0.6</minSeverity>
-          <label>Convulsing</label>
-          <painOffset>0.6</painOffset>
-          <vomitMtbDays>0.15</vomitMtbDays>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>-0.5</offset>
-              </li>
-              <li>
-                <capacity>Moving</capacity>
-                <offset>-0.20</offset>
-              </li>
-			   <li>
-                <capacity>Manipulation</capacity>
-                <offset>-0.2</offset>
-              </li>
-            </capMods>
-        </li>
-		
-        <li>
-          <minSeverity>1.0</minSeverity>
-          <label>Death</label>
-          <painOffset>1.0</painOffset>
-          <vomitMtbDays>0.01</vomitMtbDays>
-            <capMods>
-              <li>
-                <capacity>Consciousness</capacity>
-                <offset>-0.95</offset>
-              </li>
-              <li>
-                <capacity>Moving</capacity>
-                <offset>-0.95</offset>
-              </li>
-			   <li>
-                <capacity>Manipulation</capacity>
-                <offset>-0.95</offset>
-              </li>
-            </capMods>
-        </li>
-	</stages>
-	</HediffDef>
-	
-	<ThoughtDef>
-		<defName>SynthesizedOpiumIngestion</defName>
-		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>SynthesizedOpiumIngestion</hediff>
-		<validWhileDespawned>true</validWhileDespawned>
-		<stages>
-			<li>
-				<label>Synthesized Opium Consumption</label>
-				<description>OH GOD, I knew I shouldnt have taken that! What have I done?!?!.</description>
-				<baseMoodEffect>-45</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
-
-	<ChemicalDef>
-		<defName>Opioids</defName>
-		<label>Opioids</label>
-		<addictionHediff>OpioidAddiction</addictionHediff>
-		<toleranceHediff>OpioidTolerance</toleranceHediff>
-		<onGeneratedAddictedToleranceChance>1</onGeneratedAddictedToleranceChance>
-	</ChemicalDef>
-
-	<NeedDef ParentName="MOP_DrugAddictionNeedBase">
-    <defName>Chemical_Opioids</defName>
-    <needClass>Need_Chemical</needClass>
-    <label>Opioid Addiction</label>
-    <description>Because of a Opioid addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
-    <listPriority>45</listPriority>
-  </NeedDef>
-
-
-  <HediffDef ParentName="MOP_DrugToleranceBase">
-    <defName>OpioidTolerance</defName>
-    <label>Opioid Tolerance</label>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.015</severityPerDay>
-      </li>
-      <li Class="HediffCompProperties_DrugEffectFactor">
-        <chemical>Opioids</chemical>
-      </li>
-    </comps>
-		<hediffGivers>
-			<li Class="HediffGiver_RandomDrugEffect">
-				<hediff>ChemicalDamageModerate</hediff>
-				<minSeverity>0.50</minSeverity>
-				<baseMtbDays>120</baseMtbDays>
-				<partsToAffect>
-					<li>Brain</li>
-				</partsToAffect>
-			</li>
-		</hediffGivers>
-  </HediffDef>
-
-	<HediffDef ParentName="MOP_AddictionBase">
-    <defName>OpioidAddiction</defName>
-    <hediffClass>Hediff_Addiction</hediffClass>
-    <label>Opioid Addiction</label>
-    <causesNeed>Chemical_Opioids</causesNeed>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.04</severityPerDay>
-      </li>
-    </comps>
-    <stages>
-      <li>
-      </li>
-      <li>
-        <label>withdrawal</label>
-        <painFactor>3</painFactor>
-        <restFallFactorOffset>0.3</restFallFactorOffset>
-        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
-        <capMods>
-          <li>
-            <capacity>Consciousness</capacity>
-            <offset>-0.20</offset>
-          </li>
-          <li>
-            <capacity>Moving</capacity>
-            <offset>-0.50</offset>
-          </li>
-          <li>
-            <capacity>Sight</capacity>
-            <offset>-0.20</offset>
-          </li>
-          <li>
-            <capacity>BloodPumping</capacity>
-            <offset>-0.20</offset>
-          </li>
-          <li>
-            <capacity>Manipulation</capacity>
-            <offset>-0.10</offset>
-          </li>
-        </capMods>
-        <mentalStateGivers>
-					<li>
-						<mentalState>Binging_DrugExtreme</mentalState>
-						<mtbDays>40</mtbDays>
-					</li>
-          <li>
-            <mentalState>Wander_Psychotic</mentalState>
-            <mtbDays>7</mtbDays>
-          </li>
-        </mentalStateGivers>
-      </li>
-    </stages>
-  </HediffDef>
-
-	<ThoughtDef>
-    <defName>OpioidWithdrawal</defName>
-    <workerClass>ThoughtWorker_Hediff</workerClass>
-    <hediff>OpioidAddiction</hediff>
-    <validWhileDespawned>true</validWhileDespawned>
-    <stages>
-      <li>
-        <visible>false</visible>
-      </li>
-      <li>
-        <label>Opioid Withdrawal</label>
-        <description>I'm all fuzzy and can't think straight. My limbs feel heavy, I'm tired and hungry, everything hurts. And why won't my eyes focus properly?</description>
-        <baseMoodEffect>-30</baseMoodEffect>
-      </li>
-    </stages>
-	</ThoughtDef>
 </Defs>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MOP_Insulin</defName>
+		<label>Insulin</label>
+		<description>Insulin description placeholder</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/Insulin</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1200</WorkToMake>
+			<MarketValue>100</MarketValue>
+			<Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

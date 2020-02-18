@@ -4,26 +4,16 @@
     <label>Deep Fermentation Tank</label>
     <description>A deep fermentation tank for fermenting raw ingredients into antibiotic.</description>
 	<thingClass>Building_WorkTable</thingClass>
-	<graphicData>
-		<texPath>Things/Building/Production/DeepFermentationTank</texPath>
-		<graphicClass>Graphic_Multi</graphicClass>
-		<shaderType>CutoutComplex</shaderType>
-		<drawSize>(1,1)</drawSize>
-		<damageData>
-			<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
-			<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
-			<rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
-			<rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
-			<cornerTL>Damage/Corner</cornerTL>
-			<cornerTR>Damage/Corner</cornerTR>
-			<cornerBL>Damage/Corner</cornerBL>
-			<cornerBR>Damage/Corner</cornerBR>
-		</damageData>
-		<shadowData>
-			<volume>(0.5, 0.5, 0.5)</volume>
-			<offset>(0,0,-0.25)</offset>
-		</shadowData>
-	</graphicData>
+    <graphicData>
+      <texPath>Things/Building/Production/FermentingBarrel</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+    </graphicData>
 	<stuffCategories>
 		<li>Metallic</li>
 		<li>Woody</li>
@@ -42,13 +32,9 @@
 	<designationCategory>Production</designationCategory>
 	<passability>PassThroughOnly</passability>
 	<hasInteractionCell>True</hasInteractionCell>
-	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-	<inspectorTabs>
-		<li>ITab_Bills</li>
-	</inspectorTabs>		
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>	
 	<pathCost>70</pathCost>
 	<building>
-		<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
 		<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
 	</building>
@@ -56,7 +42,7 @@
 		<li Class="MedicalOverhaul.CompProperties_UniversalFermenter">
 			<products>
 				<li>
-					<thingDef>OUTPUT_PLACEHOLDER</thingDef>
+					<thingDef>PenicilliumMold</thingDef>
 					<ingredientFilter>
           			   <categories>
 							<li>PlantFoodRaw</li>
@@ -72,7 +58,6 @@
 						<min>-50</min>
 						<max>200</max>
 					</temperatureSafe>
-					<graphSuffix>_full</graphSuffix>
 				</li>
 			</products>
 		</li>

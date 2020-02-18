@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="BenchBase">
 		<defName>MOP_MedicationSynthesisWorkstation</defName>
@@ -5,7 +6,7 @@
 		<description>A work bench equipped with Beakers, Heating Stataions, And Lab equiptment for sythnesizing and producing chemials and advanced medications. A custom workbench for uses within the Medical Overhaul Project.</description>
 		<thingClass>Building_WorkTable</thingClass>
 		<graphicData>
-			<texPath>Things/Building/Production/TableDrugLab</texPath>
+			<texPath>Things/Building/Production/MedicationSynthesisWorkstation</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>(3.5,1.5)</drawSize>
