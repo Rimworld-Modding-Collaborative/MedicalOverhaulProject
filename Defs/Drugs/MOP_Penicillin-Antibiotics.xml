@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MOP_PenicillinAntibiotics</defName>
+		<label>Penicillin Antibiotics</label>
+		<description>Penicillin Based Antibiotics when taken target and kill bacteria within the body, Can be extremly helpful to patients with bacterial infections, May cause Nasuea if taken on an empty stomach.</description>
+		<graphicData>
+			<texPath>Things/Item/Drug/Penicillin</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>1200</WorkToMake>
+			<MarketValue>80</MarketValue>
+			<Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>AntibioticIngestion</hediffDef>
+          <severity>0.5</severity>
+        </li>
+      </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>MOP_MedicationSynthesis</researchPrerequisite>
+			<recipeUsers>
+				<li>MOP_MedicationSynthesisWorkstation</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<PenicilliumMold>4</PenicilliumMold>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
+	<HediffDef>
+    <defName>AntibioticIngestion</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Antibiotics</label>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.5</severityPerDay>
+      </li>
+    </comps>
+		<stages>
+			<li>
+				<statOffsets>
+					<ImmunityGainSpeed>0.3</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+
+		</stages>
+  </HediffDef>
+	
+	
+</Defs>
