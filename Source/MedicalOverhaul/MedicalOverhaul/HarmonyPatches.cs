@@ -25,12 +25,24 @@ namespace MedicalOverhaul
         [HarmonyPostfix]
         private static void Postfix(Pawn_HealthTracker __instance, DamageInfo? dinfo, Hediff hediff)
         {
+            Pawn pawn = (Pawn)CheckForStateChange_Patch.pawn.GetValue(__instance);
+            bool hasStomach = false;
+            foreach (BodyPartRecord part in pawn.health.hediffSet.GetNotMissingParts())
+            {
+                if (part.def.defName == "Stomach")
+                    hasStomach = true;
+            }
+            if (hasStomach == false)
+            {
+                if (!pawn.health.hediffSet.HasHediff(HediffDefOf.IntestinalFailure))
+                    HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
+            }
+
             if (dinfo.HasValue)
             {
                 DamageInfo dinfo2 = dinfo.Value;
                 if (dinfo2.HitPart?.def != null)
                 {
-                    Pawn pawn = (Pawn)CheckForStateChange_Patch.pawn.GetValue(__instance);
                     if (dinfo2.HitPart.def.defName == "Lung")
                     {
                         if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.RespiratoryFailure))
@@ -96,7 +108,6 @@ namespace MedicalOverhaul
                 bool hasLung = false;
                 bool hasKidney = false;
                 bool hasLiver = false;
-                bool hasStomach = false;
                 foreach (BodyPartRecord part in pawn.health.hediffSet.GetNotMissingParts())
                 {
                     if (part.def.defName == "Lung")
@@ -105,8 +116,6 @@ namespace MedicalOverhaul
                         hasKidney = true;
                     else if (part.def.defName == "Liver")
                         hasLiver = true;
-                    else if (part.def.defName == "Stomach")
-                        hasStomach = true;
                 }
 
                 if (hasLung == false)
@@ -133,13 +142,6 @@ namespace MedicalOverhaul
                 {
                     if (!pawn.health.hediffSet.HasHediff(HediffDefOf.LiverFailure))
                         HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.LiverFailure, null);
-                    result = true;
-                }
-
-                if (hasStomach == false)
-                {
-                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.IntestinalFailure))
-                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
                     result = true;
                 }
             }
