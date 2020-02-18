@@ -59,13 +59,13 @@ namespace MedicalOverhaul
             {
                 PawnData data = new PawnData();
                 bool exists = this.PawnsData.TryGetValue(pawn, out data);
-                if (data.daysCounter > 60)
-                {
-                    data.totalChronicDiseases = 0;
-                    data.daysCounter = 0;
-                }
                 if (exists == true)
                 {
+                    if (data.daysCounter > 60)
+                    {
+                        data.totalChronicDiseases = 0;
+                        data.daysCounter = 0;
+                    }
                     if (data.totalChronicDiseases < 3)
                     {
                         bool givenHediff = TryGiveHediffRandom(pawn, this.randomChance);
@@ -74,16 +74,14 @@ namespace MedicalOverhaul
                             data.totalChronicDiseases += 1;
                         }
                     }
+                    data.daysCounter += 1;
                 }
                 else
                 {
                     Log.Message(pawn.Label + " missing in PawnsData, adding...");
-                    PawnData values = new PawnData();
-                    values.totalChronicDiseases = 0;
-                    values.daysCounter = 0;
+                    PawnData values = new PawnData(0, 0);
                     this.PawnsData.Add(pawn, values);
                 }
-                data.daysCounter += 1;
             }
         }
         public override void StartedNewGame()
