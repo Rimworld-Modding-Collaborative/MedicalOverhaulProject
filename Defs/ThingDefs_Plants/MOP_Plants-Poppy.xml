@@ -9,7 +9,7 @@
       <Nutrition>0.15</Nutrition>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Plants/PoppyPlants</texPath>
+			<texPath>Things/Plants/PoppyPlants/Mature</texPath>
 			<graphicClass>Graphic_Random</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -28,7 +28,7 @@
 				<li>Hydroponic</li>
 			</sowTags>
 			<topWindExposure>0.1</topWindExposure>
-			<immatureGraphicPath>Things/Plant/PoppyPlants/PoppyPlant_Immature</immatureGraphicPath>
+			<immatureGraphicPath>Things/Plants/PoppyPlants/Immature</immatureGraphicPath>
 			<visualSizeRange>
 				<min>0.3</min>
 				<max>1.0</max>
