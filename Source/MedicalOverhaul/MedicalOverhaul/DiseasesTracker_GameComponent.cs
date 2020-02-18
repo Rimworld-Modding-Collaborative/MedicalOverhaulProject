@@ -59,6 +59,8 @@ namespace MedicalOverhaul
             {
                 PawnData data = new PawnData();
                 bool exists = this.PawnsData.TryGetValue(pawn, out data);
+                if (data.daysCounter > 60)
+                    data.totalChronicDiseases = 0;
                 if (exists == true)
                 {
                     if (data.totalChronicDiseases < 3)
@@ -67,7 +69,6 @@ namespace MedicalOverhaul
                         if (givenHediff == true)
                         {
                             data.totalChronicDiseases += 1;
-                            break;
                         }
                     }
                 }
@@ -78,6 +79,7 @@ namespace MedicalOverhaul
                     values.totalChronicDiseases = 0;
                     this.PawnsData.Add(pawn, values);
                 }
+                data.daysCounter += 1;
             }
         }
         public override void StartedNewGame()

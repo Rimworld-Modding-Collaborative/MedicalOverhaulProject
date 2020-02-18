@@ -17,9 +17,11 @@ namespace MedicalOverhaul
         public void ExposeData()
         {
             Scribe_Values.Look<int>(ref this.totalChronicDiseases, "totalChronicDiseases", 0, true);
+            Scribe_Values.Look<int>(ref this.daysCounter, "daysCounter", 0, true);
         }
 
         public int totalChronicDiseases;
+        public int daysCounter;
 
     }
 }
