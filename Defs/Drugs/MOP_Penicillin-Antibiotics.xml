@@ -19,11 +19,11 @@
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
 			<outcomeDoers>
-        <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>AntibioticIngestion</hediffDef>
-          <severity>0.5</severity>
-        </li>
-      </outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AntibioticIngestion</hediffDef>
+					<severity>0.5</severity>
+				</li>
+			</outcomeDoers>
 		</ingestible>
 		<recipeMaker>
 			<researchPrerequisite>MOP_MedicationSynthesis</researchPrerequisite>
@@ -40,30 +40,4 @@
 			</li>
 		</comps>
 	</ThingDef>
-	
-	
-	<HediffDef>
-    <defName>AntibioticIngestion</defName>
-    <hediffClass>HediffWithComps</hediffClass>
-    <label>Antibiotics</label>
-    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
-    <scenarioCanAdd>true</scenarioCanAdd>
-    <maxSeverity>1.0</maxSeverity>
-    <isBad>false</isBad>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-0.5</severityPerDay>
-      </li>
-    </comps>
-		<stages>
-			<li>
-				<statOffsets>
-					<ImmunityGainSpeed>0.3</ImmunityGainSpeed>
-				</statOffsets>
-			</li>
-
-		</stages>
-  </HediffDef>
-	
-	
 </Defs>

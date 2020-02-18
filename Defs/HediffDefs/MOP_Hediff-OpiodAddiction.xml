@@ -4,6 +4,7 @@
 		<defName>OpioidAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Opioid Addiction</label>
+		<description>This Pawn has an addiction to Opioids.</description>
 		<causesNeed>Chemical_Opioids</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">

@@ -3,6 +3,7 @@
 	<HediffDef>
 		<defName>PoppyMilkHigh</defName>
 		<label>Poppy Milk High</label>
+		<description>The high obtained from ingesting the milk of a Poppy pod.</description>
 		<defaultLabelColor>(0.062, 0.76, 0.05)</defaultLabelColor>
 		<hediffClass>HediffWithComps</hediffClass>
 		<scenarioCanAdd>true</scenarioCanAdd>
@@ -74,19 +75,4 @@
 			</li>
 		</stages>
 	</HediffDef>
-
-	<ThoughtDef>
-		<defName>OpioidHigh</defName>
-		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>OpioidHigh</hediff>
-		<stages>
-			<li>
-				<label>Opioid Highs</label>
-				<description>I took an Opioid, Now I'm all warm and fuzzy inside but feel really heavy!.</description>
-				<baseMoodEffect>10</baseMoodEffect>
-			</li>
-		</stages>
-	</ThoughtDef>
-
-
 </Defs>

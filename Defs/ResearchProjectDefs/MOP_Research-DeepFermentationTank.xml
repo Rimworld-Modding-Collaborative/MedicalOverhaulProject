@@ -3,11 +3,11 @@
 	<ResearchProjectDef>
 		<defName>MOP_DeepFermentationTankResearch</defName>
 		<label>Deep Fermentation Tank</label>
-		<description>Learn how to build a distillery to brew the strongest of alcohols and spirits!</description>
+		<description>Deep Fermentation Tank unlocks the Deep Fermentation Tank used to ferment raw ingredients into antibiotics.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
 		<prerequisites>
-			<li>Brewing</li>
+			<li>MOP_MedicationSynthesis</li>
 		</prerequisites>
  		<researchViewX>2</researchViewX>
 		<researchViewY>5</researchViewY>

@@ -2,7 +2,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>MOP_DeepFermentationTank</defName>
     <label>Deep Fermentation Tank</label>
-    <description>A deep fermentation tank for fermenting raw ingredients into antibiotic.</description>
+    <description>A deep fermentation tank for fermenting raw ingredients into antibiotics.</description>
 	<thingClass>Building_WorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/FermentingBarrel</texPath>
