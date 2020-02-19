@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugBase">
+	<ThingDef ParentName="MOP_MakeableDrugFluidBase">
 		<defName>MOP_Morphine</defName>
 		<label>morphine</label>
 		<description>Morphine is a strong painkiller with highly addictive qualities</description>
@@ -27,9 +27,9 @@
 			</outcomeDoers>
 		</ingestible>
 		<recipeMaker>
-			<researchPrerequisite>MedicationSynthesis</researchPrerequisite>
+			<researchPrerequisite>MOP_MedicationSynthesis</researchPrerequisite>
 			<recipeUsers>
-				<li>MOP_MedicationSynthesisWorkbench</li>
+				<li>MOP_MedicationSynthesisWorkstation</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>

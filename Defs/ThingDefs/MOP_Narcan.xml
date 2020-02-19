@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugPillBase">
+	<ThingDef ParentName="MOP_MakeableDrugPillBase">
 		<defName>MOP_Narcan</defName>
 		<label>Narcan</label>
 		<description>Narcan is an Opioid receptor blocker, Narcan has the chance of stopping or preventing opioid overdoses.</description>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugBase">
+	<ThingDef ParentName="MOP_MakeableDrugFluidBase">
 		<defName>MOP_PenicillinAntibiotics</defName>
 		<label>Penicillin Antibiotics</label>
 		<description>Penicillin Based Antibiotics when taken target and kill bacteria within the body, Can be extremly helpful to patients with bacterial infections, May cause Nasuea if taken on an empty stomach.</description>
