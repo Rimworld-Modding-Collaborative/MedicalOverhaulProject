@@ -358,6 +358,8 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WorkGiver_ExtractRawInsulin.cs" />
+    <Compile Include="JobDriver_ExtractRawInsulin.cs" />
     <Compile Include="CompRawInsulinExtractable.cs" />
     <Compile Include="CompProperties_RawInsulinExtractable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

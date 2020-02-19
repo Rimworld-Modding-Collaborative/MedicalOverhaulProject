@@ -8,8 +8,8 @@
 				<comps>
 					<li Class="ExtractRawInsulin.CompProperties_RawInsulinExtractable">
 						<rawInsulinDef>MOP_Insulin</rawInsulinDef>
-						<rawInsulinIntervalDays>6</rawInsulinIntervalDays>
-						<rawInsulinAmount>12</rawInsulinAmount>
+						<rawInsulinIntervalDays>1</rawInsulinIntervalDays>
+						<rawInsulinAmount>9</rawInsulinAmount>
 						<extractFemaleOnly>false</extractFemaleOnly>
 					</li>
 				</comps>
@@ -20,8 +20,8 @@
 			<value>
 				<li Class="ExtractRawInsulin.CompProperties_RawInsulinExtractable">
 					<rawInsulinDef>MOP_Insulin</rawInsulinDef>
-					<rawInsulinIntervalDays>6</rawInsulinIntervalDays>
-					<rawInsulinAmount>12</rawInsulinAmount>
+					<rawInsulinIntervalDays>1</rawInsulinIntervalDays>
+					<rawInsulinAmount>9</rawInsulinAmount>
 					<extractFemaleOnly>false</extractFemaleOnly>
 				</li>		
 			</value>
