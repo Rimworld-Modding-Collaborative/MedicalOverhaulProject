@@ -30,7 +30,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<MOP_RawInsulin>3</MOP_RawInsulin>
+			<MOP_RawInsulin>4</MOP_RawInsulin>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">

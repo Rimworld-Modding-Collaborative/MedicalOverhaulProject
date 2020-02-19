@@ -8,9 +8,9 @@
 				<comps>
 					<li Class="MedicalOverhaulProject.CompProperties_RawInsulinExtractable">
 						<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
-						<rawInsulinIntervalDays>1</rawInsulinIntervalDays>
-						<rawInsulinAmount>9</rawInsulinAmount>
-						<extractFemaleOnly>false</extractFemaleOnly>
+						<rawInsulinIntervalDays>10</rawInsulinIntervalDays>
+						<rawInsulinMin>15</rawInsulinMin>
+						<rawInsulinMax>20</rawInsulinMax>
 					</li>
 				</comps>
 			</value>
@@ -20,9 +20,9 @@
 			<value>
 				<li Class="MedicalOverhaulProject.CompProperties_RawInsulinExtractable">
 					<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
-					<rawInsulinIntervalDays>1</rawInsulinIntervalDays>
-					<rawInsulinAmount>9</rawInsulinAmount>
-					<extractFemaleOnly>false</extractFemaleOnly>
+					<rawInsulinIntervalDays>10</rawInsulinIntervalDays>
+					<rawInsulinMin>15</rawInsulinMin>
+					<rawInsulinMax>20</rawInsulinMax>
 				</li>		
 			</value>
 		</match>

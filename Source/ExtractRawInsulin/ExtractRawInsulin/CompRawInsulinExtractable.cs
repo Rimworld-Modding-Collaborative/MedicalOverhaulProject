@@ -4,6 +4,7 @@ using Verse;
 
 namespace MedicalOverhaulProject {
 	class CompRawInsulinExtractable : CompHasGatherableBodyResource {
+		
 		protected override int GatherResourcesIntervalDays {
 			get {
 				return this.Props.rawInsulinIntervalDays;
@@ -11,7 +12,8 @@ namespace MedicalOverhaulProject {
 		}
 		protected override int ResourceAmount {
 			get {
-				return this.Props.rawInsulinAmount;
+				Random rnd = new Random();
+				return rnd.Next(this.Props.rawInsulinMin, this.Props.rawInsulinMax);
 			}
 		}
 		protected override ThingDef ResourceDef {
@@ -35,9 +37,23 @@ namespace MedicalOverhaulProject {
 					return false;
 				}
 				Pawn pawn = this.parent as Pawn;
-				return (!this.Props.extractFemaleOnly||pawn==null||pawn.gender==Gender.Female)&&(pawn==null||pawn.ageTracker.CurLifeStage.milkable);
+				return (pawn==null||pawn.ageTracker.CurLifeStage.milkable);
 			}
 		}
+		/** //Used to insta-fill a piggerino with insulin
+		public override void CompTick() {
+			if(this.Active) {
+				float num = 1f;
+				Pawn pawn = this.parent as Pawn;
+				if(pawn!=null) {
+					num*=PawnUtility.BodyResourceGrowthSpeed(pawn);
+				}
+				this.fullness+=num;
+				if(this.fullness>1f) {
+					this.fullness=1f;
+				}
+			}
+		}*/
 		public override string CompInspectStringExtra() {
 			if(!this.Active) {
 				return null;
