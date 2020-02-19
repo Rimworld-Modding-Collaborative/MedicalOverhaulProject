@@ -69,7 +69,7 @@
 	<WorkGiverDef>
 		<defName>MOP_WorkGiver-ExtractRawInsulin</defName>
 		<label>extract insulin from pig</label>
-		<giverClass>ExtractRawInsulin.WorkGiver_ExtractRawInsulin</giverClass>
+		<giverClass>MedicalOverhaulProject.WorkGiver_ExtractRawInsulin</giverClass>
 		<workType>Handling</workType>
 		<verb>extract</verb>
 		<gerund>extracting</gerund>

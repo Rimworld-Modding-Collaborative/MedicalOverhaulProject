@@ -2,7 +2,7 @@
 using Verse;
 using RimWorld;
 
-namespace ExtractRawInsulin {
+namespace MedicalOverhaulProject {
 	class JobDriver_ExtractRawInsulin : JobDriver_GatherAnimalBodyResources {
 		protected override float WorkTotal {
 			get {

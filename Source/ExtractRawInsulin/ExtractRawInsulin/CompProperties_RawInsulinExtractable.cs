@@ -1,7 +1,7 @@
 ﻿using System;
 using Verse;
 
-namespace ExtractRawInsulin {
+namespace MedicalOverhaulProject {
 	class CompProperties_RawInsulinExtractable : CompProperties {
 		public int rawInsulinIntervalDays;
 		public int rawInsulinAmount = 1;

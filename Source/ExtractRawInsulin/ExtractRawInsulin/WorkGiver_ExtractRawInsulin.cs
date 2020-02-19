@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace ExtractRawInsulin {
+namespace MedicalOverhaulProject {
 	class WorkGiver_ExtractRawInsulin : WorkGiver_GatherAnimalBodyResources{
 		protected override JobDef JobDef {
 			get {

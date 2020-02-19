@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace ExtractRawInsulin {
+namespace MedicalOverhaulProject {
 	class CompRawInsulinExtractable : CompHasGatherableBodyResource {
 		protected override int GatherResourcesIntervalDays {
 			get {
