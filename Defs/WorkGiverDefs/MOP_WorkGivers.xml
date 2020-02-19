@@ -67,12 +67,12 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef>
-		<defName>MOP_ExtractInsulinFromPig</defName>
+		<defName>MOP_WorkGiver-ExtractRawInsulin</defName>
 		<label>extract insulin from pig</label>
-		<giverClass>WorkGiver_Milk</giverClass>
+		<giverClass>ExtractRawInsulin.WorkGiver_ExtractRawInsulin</giverClass>
 		<workType>Handling</workType>
-		<verb>milk</verb>
-		<gerund>milking</gerund>
+		<verb>extract</verb>
+		<gerund>extracting</gerund>
 		<priorityInType>90</priorityInType>
 		<requiredCapacities>
 			<li>Manipulation</li>

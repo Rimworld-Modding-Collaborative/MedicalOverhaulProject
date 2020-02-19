@@ -7,7 +7,7 @@
 			<value>
 				<comps>
 					<li Class="ExtractRawInsulin.CompProperties_RawInsulinExtractable">
-						<rawInsulinDef>MOP_Insulin</rawInsulinDef>
+						<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
 						<rawInsulinIntervalDays>1</rawInsulinIntervalDays>
 						<rawInsulinAmount>9</rawInsulinAmount>
 						<extractFemaleOnly>false</extractFemaleOnly>
@@ -19,7 +19,7 @@
 			<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
 			<value>
 				<li Class="ExtractRawInsulin.CompProperties_RawInsulinExtractable">
-					<rawInsulinDef>MOP_Insulin</rawInsulinDef>
+					<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
 					<rawInsulinIntervalDays>1</rawInsulinIntervalDays>
 					<rawInsulinAmount>9</rawInsulinAmount>
 					<extractFemaleOnly>false</extractFemaleOnly>

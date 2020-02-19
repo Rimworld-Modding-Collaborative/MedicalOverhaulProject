@@ -6,7 +6,7 @@ namespace ExtractRawInsulin {
 	class WorkGiver_ExtractRawInsulin : WorkGiver_GatherAnimalBodyResources{
 		protected override JobDef JobDef {
 			get {
-				return JobDefOf.Milk;
+				return DefDatabase<JobDef>.GetNamed("MOP_Job-ExtractRawInsulin", true);
 			}
 		}
 		protected override CompHasGatherableBodyResource GetComp(Pawn animal) {
