@@ -3,6 +3,7 @@
 	<HediffDef ParentName="FailureBase">
 		<defName>LiverFailure</defName>
 		<label>Acute Liver Failure</label>
+		<description>The liver has failed.</description>
 		<lethalSeverity>1</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_Immunizable">

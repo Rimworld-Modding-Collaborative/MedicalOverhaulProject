@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugBase">
+	<ThingDef ParentName="MOP_MakeableDrugFluidBase">
 		<defName>SynthesizedOpium</defName>
 		<label>Synthesized Opium</label>
 		<description>A synthetic derivative of the poppy plant, used for further production of Opioid Medications, Sunthesized Opium is the most potent form and can be extremly detrimental or even fatal to health if ingested.</description>
@@ -19,22 +19,16 @@
 		<ingestible>
 			<preferability>DesperateOnly</preferability>
 			<tasteThought></tasteThought>
-			<foodType>Processed, Fluid</foodType>
 			<joyKind>Chemical</joyKind>
 			<joy>0.50</joy>
 			<nurseable>true</nurseable>
 			<drugCategory>Hard</drugCategory>
 			<baseIngestTicks>240</baseIngestTicks>
-			<ingestSound>Ingest_Inject</ingestSound>
 			<ingestHoldOffsetStanding>
 				<northDefault>
 					<offset>(0.18,0,0)</offset>
 				</northDefault>
 			</ingestHoldOffsetStanding>
-			<ingestHoldUsesTable>false</ingestHoldUsesTable>
-			<ingestCommandString>Inject {0}</ingestCommandString>
-			<ingestReportString>Injecting {0}.</ingestReportString>
-			<useEatingSpeedStat>false</useEatingSpeedStat>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>SynthesizedOpiumIngestion</hediffDef>

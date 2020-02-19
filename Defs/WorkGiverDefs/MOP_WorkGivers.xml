@@ -66,4 +66,17 @@
 		</requiredCapacities>
 	</WorkGiverDef>
 
+	<WorkGiverDef>
+		<defName>MOP_WorkGiver-ExtractRawInsulin</defName>
+		<label>extract insulin from pig</label>
+		<giverClass>MedicalOverhaulProject.WorkGiver_ExtractRawInsulin</giverClass>
+		<workType>Handling</workType>
+		<verb>extract</verb>
+		<gerund>extracting</gerund>
+		<priorityInType>90</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
 </Defs>

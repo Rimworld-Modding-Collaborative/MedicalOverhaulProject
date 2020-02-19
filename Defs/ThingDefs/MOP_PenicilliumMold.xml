@@ -9,7 +9,7 @@
 		</graphicData>
 		<tickerType>Normal</tickerType>
 		<statBases>
-			<MarketValue>14</MarketValue>
+			<MarketValue>4</MarketValue>
 			<Mass>0.01</Mass>
 			<Nutrition>0.01</Nutrition>
 			<FoodPoisonChanceFixedHuman>1.0</FoodPoisonChanceFixedHuman>
@@ -23,7 +23,7 @@
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Rottable">
-				<daysToRotStart>8</daysToRotStart>
+				<daysToRotStart>6</daysToRotStart>
 				<rotDestroys>true</rotDestroys>
 			</li>
 		</comps>

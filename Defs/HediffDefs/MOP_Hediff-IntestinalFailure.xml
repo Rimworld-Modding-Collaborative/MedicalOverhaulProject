@@ -3,6 +3,7 @@
 	<HediffDef ParentName="FailureBase">
 		<defName>IntestinalFailure</defName>
 		<label>Intestinal Failure</label>
+		<description>The intenstines have failed.</description>
 		<lethalSeverity>1</lethalSeverity>
 		<comps>
 			<li Class="HediffCompProperties_Immunizable">

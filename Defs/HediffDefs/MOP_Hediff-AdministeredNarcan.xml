@@ -4,6 +4,7 @@
 		<defName>AdministeredNarcan</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Administered Narcan</label>
+		<description>Narcan has been administered.</description>
 		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
 		<scenarioCanAdd>true</scenarioCanAdd>
 		<maxSeverity>1.0</maxSeverity>

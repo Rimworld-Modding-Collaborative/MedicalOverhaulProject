@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugPillBase">
+	<ThingDef ParentName="MOP_MakeableDrugPillBase">
 		<defName>MOP_Narcan</defName>
 		<label>Narcan</label>
 		<description>Narcan is an Opioid receptor blocker, Narcan has the chance of stopping or preventing opioid overdoses.</description>
@@ -21,19 +21,11 @@
 			<drugCategory>Medical</drugCategory>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_RemoveHediff">
-					<chance>1</chance>
-					<range>
-						<min>0.25</min>
-						<max>1</max>
-					</range>
+					<chance>0.4</chance>
 					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
 				</li>
 				<li Class="IngestionOutcomeDoer_RemoveHediff">
-					<chance>1</chance>
-					<range>
-						<min>0.5</min>
-						<max>1</max>
-					</range>
+					<chance>0.7</chance>
 					<hediffDef>OpioidHigh</hediffDef>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
@@ -58,3 +50,4 @@
 		</comps>
 	</ThingDef>
 </Defs>
+

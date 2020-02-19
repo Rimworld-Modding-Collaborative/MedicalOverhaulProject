@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
- <ThingDef ParentName="MakeableDrugPillBase">
+ <ThingDef ParentName="MOP_MakeableDrugPillBase">
     <defName>MOP_Antidepressants</defName>
     <label>antidepressants</label>
     <description>An antidepressant medication.</description>

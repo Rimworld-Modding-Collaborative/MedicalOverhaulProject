@@ -6,23 +6,23 @@
 			<xpath>Defs/ThingDef[defName = "Pig"]</xpath>
 			<value>
 				<comps>
-					<li Class="CompProperties_Milkable">
-						<milkDef>MOP_Insulin</milkDef>
-						<milkIntervalDays>6</milkIntervalDays>
-						<milkAmount>12</milkAmount>
-						<milkFemaleOnly>false</milkFemaleOnly>
-					</li>		
+					<li Class="MedicalOverhaulProject.CompProperties_RawInsulinExtractable">
+						<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
+						<rawInsulinIntervalDays>10</rawInsulinIntervalDays>
+						<rawInsulinMin>15</rawInsulinMin>
+						<rawInsulinMax>20</rawInsulinMax>
+					</li>
 				</comps>
 			</value>
 		</nomatch>
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
 			<value>
-				<li Class="CompProperties_Milkable">
-					<milkDef>MOP_Insulin</milkDef>
-					<milkIntervalDays>6</milkIntervalDays>
-					<milkAmount>12</milkAmount>
-					<milkFemaleOnly>false</milkFemaleOnly>
+				<li Class="MedicalOverhaulProject.CompProperties_RawInsulinExtractable">
+					<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
+					<rawInsulinIntervalDays>10</rawInsulinIntervalDays>
+					<rawInsulinMin>15</rawInsulinMin>
+					<rawInsulinMax>20</rawInsulinMax>
 				</li>		
 			</value>
 		</match>

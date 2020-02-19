@@ -2,7 +2,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>MOP_DeepFermentationTank</defName>
     <label>Deep Fermentation Tank</label>
-    <description>A deep fermentation tank for fermenting raw ingredients into antibiotic.</description>
+    <description>A deep fermentation tank for fermenting raw ingredients into antibiotics.</description>
 	<thingClass>Building_WorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/FermentingBarrel</texPath>
@@ -34,10 +34,6 @@
 	<hasInteractionCell>True</hasInteractionCell>
 	<interactionCellOffset>(0,0,-1)</interactionCellOffset>	
 	<pathCost>70</pathCost>
-	<building>
-		<workSpeedPenaltyOutdoors>false</workSpeedPenaltyOutdoors>
-		<workSpeedPenaltyTemperature>false</workSpeedPenaltyTemperature>
-	</building>
 	<comps>
 		<li Class="MedicalOverhaul.CompProperties_UniversalFermenter">
 			<products>

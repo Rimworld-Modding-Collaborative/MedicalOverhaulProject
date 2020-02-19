@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="MakeableDrugBase">
+	<ThingDef ParentName="OrganicProductBase">
 		<defName>MOP_RawInsulin</defName>
-		<label>RawInsulin</label>
+		<label>Raw Insulin</label>
 		<description>RawInsulin description placeholder</description>
 		<graphicData>
 			<texPath>Things/Item/Drug/RawInsulin</texPath>
@@ -11,7 +11,6 @@
 		<socialPropernessMatters>false</socialPropernessMatters>
 		<rotatable>false</rotatable>
 		<statBases>
-			<WorkToMake>1200</WorkToMake>
 			<MarketValue>100</MarketValue>
 			<Mass>0.005</Mass>
 		</statBases>
@@ -19,7 +18,11 @@
 		<ingestible>
 			<drugCategory>Medical</drugCategory>
 			<foodType>AnimalProduct, Fluid</foodType>
+			<preferability>NeverForNutrition</preferability>
 		</ingestible>
+		<thingCategories>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
 		<comps>
 			<li Class="CompProperties_Drug">
 				<listOrder>1000</listOrder>
