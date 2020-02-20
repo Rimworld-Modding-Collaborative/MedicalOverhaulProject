@@ -6,11 +6,12 @@
 			<xpath>Defs/ThingDef[defName = "Pig"]</xpath>
 			<value>
 				<comps>
-					<li Class="MedicalOverhaulProject.CompProperties_RawInsulinExtractable">
-						<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
-						<rawInsulinIntervalDays>10</rawInsulinIntervalDays>
-						<rawInsulinMin>15</rawInsulinMin>
-						<rawInsulinMax>20</rawInsulinMax>
+					<li Class="MedicalOverhaulProject.CompProperties_RawFluidExtractable">
+						<rawFluidDef>MOP_RawInsulin</rawFluidDef>
+						<rawFluidDefName>RawInsulin</rawFluidDefName>
+						<rawFluidIntervalDays>10</rawFluidIntervalDays>
+						<rawFluidMin>15</rawFluidMin>
+						<rawFluidMax>20</rawFluidMax>
 					</li>
 				</comps>
 			</value>
@@ -18,11 +19,12 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
 			<value>
-				<li Class="MedicalOverhaulProject.CompProperties_RawInsulinExtractable">
-					<rawInsulinDef>MOP_RawInsulin</rawInsulinDef>
-					<rawInsulinIntervalDays>10</rawInsulinIntervalDays>
-					<rawInsulinMin>15</rawInsulinMin>
-					<rawInsulinMax>20</rawInsulinMax>
+				<li Class="MedicalOverhaulProject.CompProperties_RawFluidExtractable">
+					<rawFluidDef>MOP_RawInsulin</rawFluidDef>
+					<rawFluidDefName>RawInsulin</rawFluidDefName>
+					<rawFluidIntervalDays>10</rawFluidIntervalDays>
+					<rawFluidMin>15</rawFluidMin>
+					<rawFluidMax>20</rawFluidMax>
 				</li>		
 			</value>
 		</match>

@@ -3,32 +3,32 @@ using RimWorld;
 using Verse;
 
 namespace MedicalOverhaulProject {
-	class CompRawInsulinExtractable : CompHasGatherableBodyResource {
+	class CompRawFluidExtractable : CompHasGatherableBodyResource {
 		
 		protected override int GatherResourcesIntervalDays {
 			get {
-				return this.Props.rawInsulinIntervalDays;
+				return this.Props.rawFluidIntervalDays;
 			}
 		}
 		protected override int ResourceAmount {
 			get {
 				Random rnd = new Random();
-				return rnd.Next(this.Props.rawInsulinMin, this.Props.rawInsulinMax);
+				return rnd.Next(this.Props.rawFluidMin, this.Props.rawFluidMax);
 			}
 		}
 		protected override ThingDef ResourceDef {
 			get {
-				return this.Props.rawInsulinDef;
+				return this.Props.rawFluidDef;
 			}
 		}
 		protected override string SaveKey {
 			get {
-				return "eri_rawInsulinFullness";
+				return "erf_"+this.Props.rawFluidDefName+"_Fullness";
 			}
 		}
-		public CompProperties_RawInsulinExtractable Props {
+		public CompProperties_RawFluidExtractable Props {
 			get {
-				return (CompProperties_RawInsulinExtractable)this.props;
+				return (CompProperties_RawFluidExtractable)this.props;
 			}
 		}
 		protected override bool Active {
@@ -43,7 +43,7 @@ namespace MedicalOverhaulProject {
 		/** //Used to insta-fill a piggerino with insulin
 		public override void CompTick() {
 			if(this.Active) {
-				float num = 1f;
+				float num = .005f;
 				Pawn pawn = this.parent as Pawn;
 				if(pawn!=null) {
 					num*=PawnUtility.BodyResourceGrowthSpeed(pawn);
@@ -53,12 +53,13 @@ namespace MedicalOverhaulProject {
 					this.fullness=1f;
 				}
 			}
-		}*/
+		}
+	    //*/
 		public override string CompInspectStringExtra() {
 			if(!this.Active) {
 				return null;
 			}
-			return "ERI_RawInsulinFullness".Translate()+": "+base.Fullness.ToStringPercent();
+			return ("ERF_"+this.Props.rawFluidDefName+"_Fullness").Translate()+": "+base.Fullness.ToStringPercent();
 		}
 	}
 }

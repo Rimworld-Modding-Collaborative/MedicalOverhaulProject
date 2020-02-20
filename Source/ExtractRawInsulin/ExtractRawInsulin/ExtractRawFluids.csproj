@@ -7,7 +7,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MedicalOverhaulProject</RootNamespace>
-    <AssemblyName>ExtractRawInsulin</AssemblyName>
+    <AssemblyName>ExtractRawFluids</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -358,10 +358,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompProperties_RawFluidExtractable.cs" />
+    <Compile Include="CompRawFluidExtractable.cs" />
+    <Compile Include="JobDriver_ExtractRawFluid.cs" />
     <Compile Include="WorkGiver_ExtractRawInsulin.cs" />
-    <Compile Include="JobDriver_ExtractRawInsulin.cs" />
-    <Compile Include="CompRawInsulinExtractable.cs" />
-    <Compile Include="CompProperties_RawInsulinExtractable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
