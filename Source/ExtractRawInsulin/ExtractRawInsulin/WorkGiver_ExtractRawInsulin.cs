@@ -10,7 +10,7 @@ namespace MedicalOverhaulProject {
 			}
 		}
 		protected override CompHasGatherableBodyResource GetComp(Pawn animal) {
-			return animal.TryGetComp<CompRawInsulinExtractable>();
+			return animal.TryGetComp<CompRawFluidExtractable>();
 		}
 	}
 }

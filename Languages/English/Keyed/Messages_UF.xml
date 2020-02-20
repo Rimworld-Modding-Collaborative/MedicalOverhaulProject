@@ -19,6 +19,6 @@
 	<UF_WeatherWind>wind</UF_WeatherWind>
 	
 	<!-- Extract Raw Insulin -->
-	<ERI_RawInsulinFullness>Raw Insulin Fullness</ERI_RawInsulinFullness>
+	<ERF_RawInsulin_Fullness>Raw Insulin Fullness</ERF_RawInsulin_Fullness>
 
 </LanguageData>

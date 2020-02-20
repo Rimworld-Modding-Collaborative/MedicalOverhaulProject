@@ -2,7 +2,7 @@
 <Defs>
 	<JobDef>
 		<defName>MOP_Job-ExtractRawInsulin</defName>
-		<driverClass>MedicalOverhaulProject.JobDriver_ExtractRawInsulin</driverClass>
+		<driverClass>MedicalOverhaulProject.JobDriver_ExtractRawFluid</driverClass>
 		<reportString>extracting insulin from TargetA.</reportString>
 		<suspendable>false</suspendable>
 		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
