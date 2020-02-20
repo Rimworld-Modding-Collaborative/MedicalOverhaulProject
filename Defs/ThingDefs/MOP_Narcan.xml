@@ -5,7 +5,7 @@
 		<label>Narcan</label>
 		<description>Narcan is an Opioid receptor blocker, Narcan has the chance of stopping or preventing opioid overdoses.</description>
 		<graphicData>
-			<texPath>Things/Item/Drug/Penoxycyline</texPath>
+			<texPath>Things/Item/Drug/Narcan</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<socialPropernessMatters>false</socialPropernessMatters>
