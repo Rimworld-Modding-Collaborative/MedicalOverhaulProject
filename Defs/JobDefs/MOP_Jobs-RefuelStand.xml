@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<JobDef>
+		<defName>BagsToBeLoaded</defName>
+		<driverClass>MedicalOverhaul.JobDriver_BagsToBeLoaded</driverClass>
+		<reportString>Refuel TargetA in TargetB.</reportString>
+	</JobDef>
+</Defs>

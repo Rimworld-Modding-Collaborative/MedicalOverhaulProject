@@ -78,5 +78,18 @@
 			<li>Manipulation</li>
 		</requiredCapacities>
 	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>RefuelStand</defName>
+		<label>Refuel stand</label>
+		<giverClass>MedicalOverhaul.WorkGiver_BagsToBeLoaded</giverClass>
+		<workType>Hauling</workType>
+		<verb>load</verb>
+		<gerund>loading</gerund>
+		<priorityInType>107</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
 
 </Defs>
