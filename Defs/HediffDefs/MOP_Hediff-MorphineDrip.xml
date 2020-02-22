@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>MorphineDrip</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Morphine Drip</label>
+		<description>Morphine Drip.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painFactor>0.2</painFactor>
+				<statOffsets>
+					<PainShockThreshold>+0.10</PainShockThreshold>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
