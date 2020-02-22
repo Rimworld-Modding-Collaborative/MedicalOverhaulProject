@@ -9,12 +9,14 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<stages>
-			<capMods>
-				<li>
-					<capacity>BloodPumping</capacity>
-					<offset>0.55</offset>
-				</li>
-			</capMods>
+			<li>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.55</offset>
+					</li>
+				</capMods>			
+			</li>
 		</stages>
 	</HediffDef>
 </Defs>

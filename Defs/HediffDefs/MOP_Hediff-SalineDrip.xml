@@ -9,15 +9,17 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<stages>
-			<statOffsets>
-				<HungerRateMultiplier>-0.25</HungerRateMultiplier>
-			</statOffsets>
-			<capMods>
-				<li>
-					<capacity>BloodPumping</capacity>
-					<offset>0.3</offset>
-				</li>
-			</capMods>
+			<li>
+				<statOffsets>
+					<HungerRateMultiplier>-0.25</HungerRateMultiplier>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>0.3</offset>
+					</li>
+				</capMods>
+			</li>
 		</stages>
 	</HediffDef>
 </Defs>

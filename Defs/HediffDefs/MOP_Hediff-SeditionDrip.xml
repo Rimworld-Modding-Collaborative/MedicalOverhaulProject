@@ -9,13 +9,15 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<stages>
-			<restFallFactor>1.5</restFallFactor>
-			<capMods>
-				<li>
-					<capacity>Consciousness</capacity>
-					<offset>-0.3</offset>
-				</li>
-			</capMods>
+			<li>
+				<restFallFactor>1.5</restFallFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.3</offset>
+					</li>
+				</capMods>
+			</li>
 		</stages>
 	</HediffDef>
 </Defs>

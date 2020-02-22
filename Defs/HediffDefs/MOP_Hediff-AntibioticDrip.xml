@@ -9,9 +9,11 @@
 		<maxSeverity>1.0</maxSeverity>
 		<isBad>false</isBad>
 		<stages>
-			<statOffsets>
-				<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
-			</statOffsets>
+			<li>
+				<statOffsets>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
 		</stages>
 	</HediffDef>
 </Defs>
