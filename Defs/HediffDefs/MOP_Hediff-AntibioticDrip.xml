@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<HediffDef>
+		<defName>AntibioticDrip</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<label>Antibiotic Drip</label>
+		<description>Antibiotic Drip.</description>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<ImmunityGainSpeed>0.15</ImmunityGainSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+</Defs>
