@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RimWorld;
 using Verse;
+using System.Reflection;
 
 namespace MedicalOverhaul
 {
@@ -77,11 +78,22 @@ namespace MedicalOverhaul
                 {
                     this.secondFuelCount = secondRefuelComp.Fuel;
                 }
-                //if (this.oldFirstFuelType != this.firstFuelType)
-                //{
-                //    this.def.graphicData.texPath = 
-                //}
-
+                if (this.oldFirstFuelType != this.firstFuelType)
+                {
+                    string oldTexPath = oldFirstFuelType.defName;
+                    string newTexPath = firstFuelType.defName;
+                    Log.Message(oldTexPath);
+                    Log.Message(newTexPath);
+                    string texPath = "";
+                    //Graphic value = GraphicDatabase.Get(this.def.graphicData.graphicClass, texPath, 
+                    //    ShaderDatabase.LoadShader(this.def.graphicData.shaderType.shaderPath), 
+                    //    this.def.graphicData.drawSize, this.DrawColor, this.DrawColorTwo);
+                    //typeof(Thing).GetField("graphicInt", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(this, value);
+                    //if (this.Map != null)
+                    //{
+                    //    this.DirtyMapMesh(this.Map);
+                    //}
+                }
                 bool flag2 = this.firstRefuelComp.HasFuel && this.flickableComp.SwitchIsOn;
                 if (flag2)
                 {
