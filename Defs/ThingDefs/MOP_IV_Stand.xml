@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-	<ThingDef ParentName="BuildingBase">
+	<ThingDef ParentName="BuildingBase"><!-- may need to make a new base... may be important for setting up the new slottable deal-->
 		<defName>MOP_IV_BaseStand</defName>
 		<label>IV Stand</label>
-		<description>IV Stand.</description>
+		<description>IV Stand</description>
 		<thingClass>MedicalOverhaul.IV_Stand</thingClass>
 		<tickerType>Normal</tickerType>
 		<graphicData>
 			<texPath>Things/Building/Misc/IV_Empty_Empty_Stand</texPath>
+			<!-- this is where the texture deal will happen... it's gonna be a problem lol-->
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<offset>(0,0,-0.3)</offset>
@@ -46,21 +47,25 @@
 			<li>BuildingsMisc</li>
 		</thingCategories>
 		<designationCategory>Misc</designationCategory>
-		<minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
 		<comps>
 			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Refuelable">
-				<fuelCapacity>15.0</fuelCapacity>
-				<fuelFilter>
-				</fuelFilter>
-				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
-				<autoRefuelPercent>50</autoRefuelPercent>
-				<showFuelGizmo>false</showFuelGizmo>
-				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+			<li Class="MedicalOverhaul.CompProperties_Refuelable">
+				<bag1_Capacity>9.0</bag1_Capacity>
+				<bag1_ConsumeFuelOnlyWhenUsed>true</bag1_ConsumeFuelOnlyWhenUsed>
+				<bag1_AutoRefuelPercent>50</bag1_AutoRefuelPercent>
+
+				<bag2_Capacity>15.0</bag2_Capacity>
+				<bag2_ConsumeFuelOnlyWhenUsed>true</bag2_ConsumeFuelOnlyWhenUsed>
+				<bag2_AutoRefuelPercent>50</bag2_AutoRefuelPercent>
+
+
+				<bagFilter></bagFilter>
 				<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+				<drawOutOfFuelOverlay>false</drawOutOfFuelOverlay>
+				<showFuelGizmo>false</showFuelGizmo>
 			</li>
 			<li Class="CompProperties_Facility">
 				<maxSimultaneous>1</maxSimultaneous>

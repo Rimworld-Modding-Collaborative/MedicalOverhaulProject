@@ -20,5 +20,11 @@
 	
 	<!-- Extract Raw Insulin -->
 	<ERF_RawInsulin_Fullness>Raw Insulin Fullness</ERF_RawInsulin_Fullness>
+	
+	<!-- DripStands-->
+	<dripStands_firstBag>Bag 1</dripStands_firstBag>
+	<dripStands_firstBagCount>Bag 1 Count</dripStands_firstBagCount>
+	<dripStands_secondBag>Bag 2</dripStands_secondBag>
+	<dripStands_secondBagCount>Bag 2 Count</dripStands_secondBagCount>
 
 </LanguageData>

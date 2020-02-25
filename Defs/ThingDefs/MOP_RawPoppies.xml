@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="MOP_RawFruitBase">
-		<defName>RawPoppies</defName>
+		<defName>MOP_RawPoppies</defName>
 		<label>Raw Poppies</label>
 		<description>Raw Poppy Flowers and Blubs harvested before Milking.</description>
 		<graphicData>

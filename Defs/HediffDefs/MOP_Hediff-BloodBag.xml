@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>BloodBag</defName>
+		<defName>MOP_BloodBag</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Blood Bag</label>
 		<description>Blood Bag.</description>

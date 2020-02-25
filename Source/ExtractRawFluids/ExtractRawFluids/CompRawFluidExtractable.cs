@@ -2,7 +2,7 @@
 using RimWorld;
 using Verse;
 
-namespace MedicalOverhaulProject {
+namespace MedicalOverhaul {
 	class CompRawFluidExtractable : CompHasGatherableBodyResource {
 		
 		protected override int GatherResourcesIntervalDays {

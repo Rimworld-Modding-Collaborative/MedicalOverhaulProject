@@ -1,7 +1,7 @@
 ﻿using System;
 using Verse;
 
-namespace MedicalOverhaulProject {
+namespace MedicalOverhaul {
 	class CompProperties_RawFluidExtractable : CompProperties {
 		public int rawFluidIntervalDays;
 		public int rawFluidMin = 1;

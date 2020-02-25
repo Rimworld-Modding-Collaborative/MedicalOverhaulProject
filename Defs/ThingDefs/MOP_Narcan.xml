@@ -22,14 +22,14 @@
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_RemoveHediff">
 					<chance>0.4</chance>
-					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
+					<hediffDef>MOP_SynthesizedOpiumIngestion</hediffDef>
 				</li>
 				<li Class="IngestionOutcomeDoer_RemoveHediff">
 					<chance>0.7</chance>
-					<hediffDef>OpioidHigh</hediffDef>
+					<hediffDef>MOP_OpioidHigh</hediffDef>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>AdministeredNarcan</hediffDef>
+					<hediffDef>MOP_AdministeredNarcan</hediffDef>
 					<severity>1.0</severity>
 				</li>
 			</outcomeDoers>

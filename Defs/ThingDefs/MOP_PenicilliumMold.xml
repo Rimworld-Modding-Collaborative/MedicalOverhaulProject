@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="MOP_RawFruitBase">
-		<defName>PenicilliumMold</defName>
+		<defName>MOP_PenicilliumMold</defName>
 		<label>Penicillium Mold</label>
 		<description>Penicillium Mold is grown on food in a Deep Fermentation Tank, a specific type of mold that can be synthesized into Antibiotics which are used to fight infections and deseases</description>
 		<graphicData>

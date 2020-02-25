@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef ParentName="FailureBase">
-		<defName>RespiratoryFailure</defName>
+	<HediffDef ParentName="MOP_FailureBase">
+		<defName>MOP_RespiratoryFailure</defName>
 		<label>Respiratory Failure</label>
 		<description>The respiratory system has failed.</description>
 		<lethalSeverity>0.8</lethalSeverity>

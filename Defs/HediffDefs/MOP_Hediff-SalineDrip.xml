@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>SalineDrip</defName>
+		<defName>MOP_SalineDrip</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Saline Drip</label>
 		<description>Saline Drip.</description>

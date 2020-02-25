@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>SynthesizedOpiumIngestion</defName>
+		<defName>MOP_SynthesizedOpiumIngestion</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Synthesized Opium Ingestion</label>
 		<description>The result of ingesting Synthesized Opium prior to it being processed into the proper drug form.</description>

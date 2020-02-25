@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef ParentName="MOP_DrugToleranceBase">
-		<defName>OpioidTolerance</defName>
+		<defName>MOP_OpioidTolerance</defName>
 		<label>Poppy Milk Tolerance</label>
 		<description>A tolerance to Opioids.</description>
 		<comps>
@@ -9,7 +9,7 @@
 				<severityPerDay>-0.015</severityPerDay>
 			</li>
 			<li Class="HediffCompProperties_DrugEffectFactor">
-				<chemical>Opioids</chemical>
+				<chemical>MOP_Opioids</chemical>
 			</li>
 		</comps>
 		<hediffGivers>

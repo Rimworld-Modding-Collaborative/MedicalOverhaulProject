@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="MOP_MakeableDrugFluidBase">
-		<defName>SynthesizedOpium</defName>
+		<defName>MOP_SynthesizedOpium</defName>
 		<label>Synthesized Opium</label>
 		<description>A synthetic derivative of the poppy plant, used for further production of Opioid Medications, Sunthesized Opium is the most potent form and can be extremly detrimental or even fatal to health if ingested.</description>
 		<graphicData>
@@ -31,12 +31,12 @@
 			</ingestHoldOffsetStanding>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>SynthesizedOpiumIngestion</hediffDef>
+					<hediffDef>MOP_SynthesizedOpiumIngestion</hediffDef>
 					<severity>0.1</severity>
-					<toleranceChemical>Opioids</toleranceChemical>
+					<toleranceChemical>MOP_Opioids</toleranceChemical>
 				</li>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>OpioidTolerance</hediffDef>
+					<hediffDef>MOP_OpioidTolerance</hediffDef>
 					<severity>0.085</severity>
 					<divideByBodySize>true</divideByBodySize>
 				</li>
@@ -53,12 +53,12 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<RawPoppies>18</RawPoppies>
-			<PoppyMilk>4</PoppyMilk>
+			<MOP_RawPoppies>18</MOP_RawPoppies>
+			<MOP_PoppyMilk>4</MOP_PoppyMilk>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">
-				<chemical>Opioids</chemical>
+				<chemical>MOP_Opioids</chemical>
 				<addictiveness>0.9</addictiveness>
 				<minToleranceToAddict>0</minToleranceToAddict>
 				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>

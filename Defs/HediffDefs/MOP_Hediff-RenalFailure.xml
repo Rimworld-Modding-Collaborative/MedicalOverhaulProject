@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef ParentName="FailureBase">
-		<defName>RenalFailure</defName>
+	<HediffDef ParentName="MOP_FailureBase">
+		<defName>MOP_RenalFailure</defName>
 		<label>Acute Renal failure</label>
 		<description>Acute failure of the kidneys, resulting in an inability to filter the blood of toxins.</description>
 		<lethalSeverity>1</lethalSeverity>

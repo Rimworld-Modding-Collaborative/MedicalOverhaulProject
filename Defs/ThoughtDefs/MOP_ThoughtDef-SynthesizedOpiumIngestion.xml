@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThoughtDef>
-		<defName>SynthesizedOpiumIngestion</defName>
+		<defName>MOP_SynthesizedOpiumIngestion</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>SynthesizedOpiumIngestion</hediff>
+		<hediff>MOP_SynthesizedOpiumIngestion</hediff>
 		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>

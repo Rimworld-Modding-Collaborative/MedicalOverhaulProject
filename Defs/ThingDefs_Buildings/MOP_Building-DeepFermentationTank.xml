@@ -38,7 +38,7 @@
 		<li Class="MedicalOverhaul.CompProperties_UniversalFermenter">
 			<products>
 				<li>
-					<thingDef>PenicilliumMold</thingDef>
+					<thingDef>MOP_PenicilliumMold</thingDef>
 					<ingredientFilter>
           			   <categories>
 							<li>PlantFoodRaw</li>

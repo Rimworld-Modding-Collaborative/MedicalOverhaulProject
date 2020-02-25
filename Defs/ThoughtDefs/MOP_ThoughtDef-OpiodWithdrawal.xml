@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThoughtDef>
-		<defName>OpioidWithdrawal</defName>
+		<defName>MOP_OpioidWithdrawal</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>OpioidAddiction</hediff>
+		<hediff>MOP_OpioidAddiction</hediff>
 		<validWhileDespawned>true</validWhileDespawned>
 		<stages>
 			<li>

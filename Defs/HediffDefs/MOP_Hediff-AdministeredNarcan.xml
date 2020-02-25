@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>AdministeredNarcan</defName>
+		<defName>MOP_AdministeredNarcan</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Administered Narcan</label>
 		<description>Narcan has been administered.</description>
@@ -17,8 +17,8 @@
 		<stages>
 			<li>
 				<makeImmuneTo>
-					<li>SynthesizedOpiumIngestion</li>
-					<li>OpioidHigh</li>
+					<li>MOP_SynthesizedOpiumIngestion</li>
+					<li>MOP_OpioidHigh</li>
 				</makeImmuneTo>
 			</li>
 		</stages>

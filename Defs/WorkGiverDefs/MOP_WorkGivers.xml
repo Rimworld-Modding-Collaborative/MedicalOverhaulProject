@@ -21,7 +21,7 @@
   -->
 
 	<WorkGiverDef>
-		<defName>DoBillsMedicationSynthesisWorkstation</defName>
+		<defName>MOP_DoBillsMedicationSynthesisWorkstation</defName>
 		<label>Synthesize Medication</label>
 		<giverClass>WorkGiver_DoBill</giverClass>
 		<workType>Crafting</workType>
@@ -69,7 +69,7 @@
 	<WorkGiverDef>
 		<defName>MOP_WorkGiver-ExtractRawInsulin</defName>
 		<label>extract insulin from pig</label>
-		<giverClass>MedicalOverhaulProject.WorkGiver_ExtractRawInsulin</giverClass>
+		<giverClass>MedicalOverhaul.WorkGiver_ExtractRawInsulin</giverClass>
 		<workType>Handling</workType>
 		<verb>extract</verb>
 		<gerund>extracting</gerund>
@@ -80,7 +80,7 @@
 	</WorkGiverDef>
 	
 	<WorkGiverDef>
-		<defName>RefuelStand</defName>
+		<defName>MOP_RefuelStand</defName>
 		<label>Refuel stand</label>
 		<giverClass>MedicalOverhaul.WorkGiver_BagsToBeLoaded</giverClass>
 		<workType>Hauling</workType>

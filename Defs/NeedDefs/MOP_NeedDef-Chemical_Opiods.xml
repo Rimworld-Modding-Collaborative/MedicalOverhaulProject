@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<NeedDef ParentName="MOP_DrugAddictionNeedBase">
-		<defName>Chemical_Opioids</defName>
+		<defName>MOP_Chemical_Opioids</defName>
 		<needClass>Need_Chemical</needClass>
 		<label>Opioid Addiction</label>
 		<description>Because of a Opioid addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>NutritionalDrip</defName>
+		<defName>MOP_NutritionalDrip</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Nutritional Drip</label>
 		<description>Nutritional Drip.</description>

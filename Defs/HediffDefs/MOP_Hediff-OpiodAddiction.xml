@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef ParentName="MOP_AddictionBase">
-		<defName>OpioidAddiction</defName>
+		<defName>MOP_OpioidAddiction</defName>
 		<hediffClass>Hediff_Addiction</hediffClass>
 		<label>Opioid Addiction</label>
 		<description>This Pawn has an addiction to Opioids.</description>
-		<causesNeed>Chemical_Opioids</causesNeed>
+		<causesNeed>MOP_Chemical_Opioids</causesNeed>
 		<comps>
 			<li Class="HediffCompProperties_SeverityPerDay">
 				<severityPerDay>-0.04</severityPerDay>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef ParentName="FailureBase">
-		<defName>IntestinalFailure</defName>
+	<HediffDef ParentName="MOP_FailureBase">
+		<defName>MOP_IntestinalFailure</defName>
 		<label>Intestinal Failure</label>
 		<description>The intenstines have failed.</description>
 		<lethalSeverity>1</lethalSeverity>

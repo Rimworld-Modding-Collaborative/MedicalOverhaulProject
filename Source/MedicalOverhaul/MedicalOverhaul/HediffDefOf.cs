@@ -7,13 +7,13 @@ namespace MedicalOverhaul
     [DefOf]
     public static class HediffDefOf
     {
-        public static HediffDef RespiratoryFailure;
+        public static HediffDef MOP_RespiratoryFailure;
 
-        public static HediffDef IntestinalFailure;
+        public static HediffDef MOP_IntestinalFailure;
 
-        public static HediffDef LiverFailure;
+        public static HediffDef MOP_LiverFailure;
 
-        public static HediffDef RenalFailure;
+        public static HediffDef MOP_RenalFailure;
     }
 
 }

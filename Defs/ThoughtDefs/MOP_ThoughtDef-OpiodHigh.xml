@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThoughtDef>
-		<defName>OpioidHigh</defName>
+		<defName>MOP_OpioidHigh</defName>
 		<workerClass>ThoughtWorker_Hediff</workerClass>
-		<hediff>OpioidHigh</hediff>
+		<hediff>MOP_OpioidHigh</hediff>
 		<stages>
 			<li>
 				<label>Opioid Highs</label>

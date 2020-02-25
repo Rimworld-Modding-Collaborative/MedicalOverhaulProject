@@ -34,8 +34,8 @@ namespace MedicalOverhaul
             }
             if (hasStomach == false)
             {
-                if (!pawn.health.hediffSet.HasHediff(HediffDefOf.IntestinalFailure))
-                    HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.IntestinalFailure, null);
+                if (!pawn.health.hediffSet.HasHediff(HediffDefOf.MOP_IntestinalFailure))
+                    HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_IntestinalFailure, null);
             }
 
             if (dinfo.HasValue)
@@ -45,7 +45,7 @@ namespace MedicalOverhaul
                 {
                     if (dinfo2.HitPart.def.defName == "Lung")
                     {
-                        if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.RespiratoryFailure))
+                        if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.MOP_RespiratoryFailure))
                         {
                             Random random = new Random();
                             if (random.Next(0, 100) < 20)
@@ -53,17 +53,17 @@ namespace MedicalOverhaul
                                 //throws an error if give bodypart lung: Tried to add health diff to missing part BodyPartRecord(Lung parts.Count=0)
                                 //BodyPartDef lung = pawn.RaceProps.body.AllParts.Find((BodyPartRecord x) => x.LabelCap == dinfo2.HitPart.LabelCap).def;
 
-                                HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, BodyPartDefOf.Torso, 7, 16);
+                                HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_RespiratoryFailure, BodyPartDefOf.Torso, 7, 16);
                             }
                         }
                     }
                     else if (dinfo2.HitPart.def.defName == BodyPartDefOf.Neck.defName)
                     {
-                        if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.RespiratoryFailure))
+                        if (!pawn.health.hediffSet.hediffs.Exists((Hediff x) => x.def == HediffDefOf.MOP_RespiratoryFailure))
                         {
                             Random random = new Random();
                             if (random.Next(0, 100) < 30)
-                                HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, BodyPartDefOf.Neck, 3, 9);
+                                HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_RespiratoryFailure, BodyPartDefOf.Neck, 3, 9);
                         }
                     }
                 }
@@ -120,28 +120,28 @@ namespace MedicalOverhaul
 
                 if (hasLung == false)
                 {
-                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.RespiratoryFailure))
-                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, null, 3, 9);
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.MOP_RespiratoryFailure))
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_RespiratoryFailure, null, 3, 9);
                     else
                     {
-                        Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.RespiratoryFailure);
+                        Hediff hediff = pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.MOP_RespiratoryFailure);
                         if (HediffUtils.getDeathTimeInHours(hediff) > 9f)
-                            HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RespiratoryFailure, null, 3, 9);
+                            HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_RespiratoryFailure, null, 3, 9);
                     }
                     result = true;
                 }
 
                 if (hasKidney == false)
                 {
-                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.RenalFailure))
-                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.RenalFailure, null);
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.MOP_RenalFailure))
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_RenalFailure, null);
                     result = true;
                 }
 
                 if (hasLiver == false)
                 {
-                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.LiverFailure))
-                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.LiverFailure, null);
+                    if (!pawn.health.hediffSet.HasHediff(HediffDefOf.MOP_LiverFailure))
+                        HediffUtils.GiveHediffToPawn(pawn, HediffDefOf.MOP_LiverFailure, null);
                     result = true;
                 }
             }

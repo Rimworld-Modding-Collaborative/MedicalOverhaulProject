@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>SeditionDrip</defName>
+		<defName>MOP_SeditionDrip</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Sedition Drip</label>
 		<description>Sedition Drip.</description>

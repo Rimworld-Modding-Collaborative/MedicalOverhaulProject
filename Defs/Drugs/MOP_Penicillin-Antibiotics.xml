@@ -32,7 +32,7 @@
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<PenicilliumMold>4</PenicilliumMold>
+			<MOP_PenicilliumMold>4</MOP_PenicilliumMold>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Drug">

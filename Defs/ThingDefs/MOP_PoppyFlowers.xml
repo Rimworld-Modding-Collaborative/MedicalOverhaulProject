@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<ThingDef ParentName="MOP_RawFruitBase">
-		<defName>PoppyFlowers</defName>
+		<defName>MOP_PoppyFlowers</defName>
 		<label>Poppy Flowers</label>
 		<description>Raw Poppy Flowers and Blubs harvested after Milking.</description>
 		<graphicData>
@@ -19,12 +19,12 @@
 			<li Class="CompExtraRecipeProducts.CompProperties_ExtraRecipeProducts">
 				<ExtraProducts>
 					<li>
-						<productdef>RawPoppies</productdef>
+						<productdef>MOP_RawPoppies</productdef>
 						<Min>0</Min>
 						<Max>6</Max>
 					</li>
 					<li>
-						<productdef>PoppyMilk</productdef>
+						<productdef>MOP_PoppyMilk</productdef>
 						<Min>0</Min>
 						<Max>2</Max>
 					</li>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<HediffDef ParentName="FailureBase">
-		<defName>LiverFailure</defName>
+	<HediffDef ParentName="MOP_FailureBase">
+		<defName>MOP_LiverFailure</defName>
 		<label>Acute Liver Failure</label>
 		<description>The liver has failed.</description>
 		<lethalSeverity>1</lethalSeverity>

@@ -6,7 +6,7 @@
 			<xpath>Defs/ThingDef[defName = "Pig"]</xpath>
 			<value>
 				<comps>
-					<li Class="MedicalOverhaulProject.CompProperties_RawFluidExtractable">
+					<li Class="MedicalOverhaul.CompProperties_RawFluidExtractable">
 						<rawFluidDef>MOP_RawInsulin</rawFluidDef>
 						<rawFluidDefName>RawInsulin</rawFluidDefName>
 						<rawFluidIntervalDays>10</rawFluidIntervalDays>
@@ -19,7 +19,7 @@
 		<match Class="PatchOperationAdd">
 			<xpath>Defs/ThingDef[defName = "Pig"]/comps</xpath>
 			<value>
-				<li Class="MedicalOverhaulProject.CompProperties_RawFluidExtractable">
+				<li Class="MedicalOverhaul.CompProperties_RawFluidExtractable">
 					<rawFluidDef>MOP_RawInsulin</rawFluidDef>
 					<rawFluidDefName>RawInsulin</rawFluidDefName>
 					<rawFluidIntervalDays>10</rawFluidIntervalDays>

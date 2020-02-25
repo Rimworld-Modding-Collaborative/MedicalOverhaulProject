@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<HediffDef>
-		<defName>MorphineDrip</defName>
+		<defName>MOP_MorphineDrip</defName>
 		<hediffClass>HediffWithComps</hediffClass>
 		<label>Morphine Drip</label>
 		<description>Morphine Drip.</description>

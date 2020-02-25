@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
  <ThingDef ParentName="MOP_RawFruitBase">
-    <defName>PoppyMilk</defName>
+    <defName>MOP_PoppyMilk</defName>
     <label>Poppy Milk</label>
     <description>Milk of the poppy, The base fluid drained from matured poppy bulbs, has Opioid like qualities, if taken too often, it can generate a mild addiction.</description>
     <tradeability>Sellable</tradeability>
@@ -30,12 +30,12 @@
       <drugCategory>Social</drugCategory>
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>OpioidHigh</hediffDef>
+          <hediffDef>MOP_OpioidHigh</hediffDef>
           <severity>0.50</severity>
-          <toleranceChemical>Opioids</toleranceChemical>
+          <toleranceChemical>MOP_Opioids</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_GiveHediff">
-          <hediffDef>OpioidTolerance</hediffDef>
+          <hediffDef>MOP_OpioidTolerance</hediffDef>
           <severity>0.032</severity>
           <divideByBodySize>true</divideByBodySize>
         </li>
@@ -47,7 +47,7 @@
 				<rotDestroys>true</rotDestroys>
 			</li>
 			<li Class="CompProperties_Drug">
-				<chemical>Opioids</chemical>
+				<chemical>MOP_Opioids</chemical>
 				<addictiveness>0.060</addictiveness>
 				<minToleranceToAddict>0.15</minToleranceToAddict>
 				<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
